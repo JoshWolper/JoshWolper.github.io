@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from "react";
 import "./App.css";
 //image imports
 import bloodClot from "./GIFs/BloodFlowWithClot.gif";
@@ -22,7 +23,8 @@ const Row1 = () => {
       </div>
       <img src={breadHIGH} />
       <img src={Glacier2HIGH} />
-      <img src={orangeHIGH} /> <img src={bloodClot} />
+      <img src={orangeHIGH} />
+      <img src={bloodClot} />
     </div>
   );
 };
@@ -39,9 +41,25 @@ const Row4 = () => {
   return <div id="row4">row four</div>;
 };
 
+const LightBox = () => {
+  return (
+    <div id="lightbox">
+      <div id="lightboxClose">❌</div>
+      <div id="lightboxPrev">◀</div>
+      <div id="lightboxNext">▶</div>
+      <div id="lightBoxImage">
+        <img src={breadHIGH} />
+      </div>
+      <div id="lightBoxTitle">lightbox title</div>
+      <div id="lightBoxContent">lightbox content</div>
+    </div>
+  );
+};
+
 function App() {
   return (
     <div className="App">
+      <LightBox />
       <Header />
       <div id="pageContent">
         <Row1 />
