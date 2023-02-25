@@ -1,17 +1,30 @@
-import logo from "./logo.svg";
 import "./App.css";
+//image imports
+import bloodClot from "./GIFs/BloodFlowWithClot.gif";
+import breadHIGH from "./GIFs/breadHIGH.gif";
+import Glacier2HIGH from "./GIFs/Glacier2HIGH.gif";
+import orangeHIGH from "./GIFs/orangeHIGH.gif";
 
 const Header = () => {
   return (
     <header>
-      <h1>Josh Wolper</h1>
-      <h2>Software Engineer</h2>
+      <div>Josh Wolper</div>
+      <div>Software Engineer</div>
     </header>
   );
 };
 
 const Row1 = () => {
-  return <div id="row1">row one</div>;
+  return (
+    <div id="row1">
+      <div className="content">
+        blsh blsh bjkdsa fhnkjldeshbfnvkaljdfhbvkjlsdfh
+      </div>
+      <img src={breadHIGH} />
+      <img src={Glacier2HIGH} />
+      <img src={orangeHIGH} /> <img src={bloodClot} />
+    </div>
+  );
 };
 
 const Row2 = () => {
