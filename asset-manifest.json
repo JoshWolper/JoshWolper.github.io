@@ -1,16 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.073c9b0a.css",
-    "main.js": "/static/js/main.dc4b5848.js",
+    "main.css": "/static/css/main.580a2fe4.css",
+    "main.js": "/static/js/main.dde3e063.js",
     "static/js/787.db63a270.chunk.js": "/static/js/787.db63a270.chunk.js",
-    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/Glacier2HIGH.gif": "/static/media/Glacier2HIGH.3a89f37178e9bd18f97f.gif",
+    "static/media/breadHIGH.gif": "/static/media/breadHIGH.8be21c10becf15bd8834.gif",
+    "static/media/orangeHIGH.gif": "/static/media/orangeHIGH.c2067ec08180e8a72075.gif",
+    "static/media/BloodFlowWithClot.gif": "/static/media/BloodFlowWithClot.b4141286e9ec21457d6a.gif",
     "index.html": "/index.html",
-    "main.073c9b0a.css.map": "/static/css/main.073c9b0a.css.map",
-    "main.dc4b5848.js.map": "/static/js/main.dc4b5848.js.map",
+    "main.580a2fe4.css.map": "/static/css/main.580a2fe4.css.map",
+    "main.dde3e063.js.map": "/static/js/main.dde3e063.js.map",
     "787.db63a270.chunk.js.map": "/static/js/787.db63a270.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.dc4b5848.js"
+    "static/css/main.580a2fe4.css",
+    "static/js/main.dde3e063.js"
   ]
 }
