@@ -5,19 +5,14 @@
   height: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#row1 img,
+#row2 img,
+#row3 img,
+#row4 img {
+  cursor: pointer;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
 }
 
 html {
@@ -31,7 +26,6 @@ html {
 }
 
 #lightBox {
-  /* visibility: hidden !important; */
   display: grid;
   position: fixed;
   top: 0;
@@ -105,13 +99,12 @@ html {
 
 #pageContent {
   display: grid;
-  grid-template-rows: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 25% 25% 25% 25%;
   grid-template-areas:
     "row1"
     "row2"
     "row3"
     "row4";
-  height: 100%;
 }
 
 #row1 {
@@ -122,10 +115,6 @@ html {
   grid-template-columns: 10% 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   align-items: stretch;
-}
-
-#row1 img {
-  max-width: 320px;
 }
 
 #row2 {

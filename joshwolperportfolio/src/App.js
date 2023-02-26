@@ -1,13 +1,26 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 //image imports
 import bloodClot from "./GIFs/BloodFlowWithClot.gif";
 import breadHIGH from "./GIFs/breadHIGH.gif";
 import Glacier2HIGH from "./GIFs/Glacier2HIGH.gif";
 import orangeHIGH from "./GIFs/orangeHIGH.gif";
+import contentDatabase from "./contentDatabase.json";
+import LightBox from "./LightBox";
 
 function App() {
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [showLightBox, setShowLightBox] = useState(false);
+  const [currentImage, setCurrentImage] = useState(null);
+  const [images, setImages] = useState({});
+
+  useEffect(() => {
+    setImages({
+      bloodClot,
+      breadHIGH,
+      Glacier2HIGH,
+      orangeHIGH,
+    });
+  }, []);
 
   const Header = () => {
     return (
@@ -18,16 +31,43 @@ function App() {
     );
   };
 
-  const Row1 = () => {
+  const hideLightBox = () => {
+    setShowLightBox(false);
+  };
+
+  const handleImageClick = (key) => {
+    setCurrentImage(key);
+    setShowLightBox(true);
+  };
+
+  const Row1 = ({ data }) => {
     return (
       <div id="row1">
-        <div className="content">
-          blsh blsh bjkdsa fhnkjldeshbfnvkaljdfhbvkjlsdfh
+        <div className="mainDescriptionBox">
+          <h2>Some stuff</h2>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, god dammit
+          </div>
         </div>
-        <img value={breadHIGH} src={breadHIGH} />
-        <img src={Glacier2HIGH} />
-        <img src={orangeHIGH} />
-        <img src={bloodClot} />
+        {Object.keys(data.row1).map((key) => (
+          <div key={key} onClick={() => handleImageClick(key)}>
+            <img alt={data.row1[key].alt} src={images[key]} />
+          </div>
+        ))}
+
+        {currentImage && (
+          <LightBox
+            showLightBox={showLightBox}
+            hideLightBox={hideLightBox}
+            setCurrentImage={setCurrentImage}
+            currentImage={currentImage}
+            updateCurrentImage={setCurrentImage}
+            images={images}
+            alt={data.row1[currentImage].alt}
+            title={data.row1[currentImage].title}
+            description={data.row1[currentImage].description}
+          />
+        )}
       </div>
     );
   };
@@ -44,31 +84,11 @@ function App() {
     return <div id="row4">row four</div>;
   };
 
-  const LightBox = () => {
-    return (
-      <div id="lightBox">
-        <div id="lightBoxClose">❌</div>
-        <div id="lightBoxPrev">◀</div>
-        <div id="lightBoxNext">▶</div>
-        <img id="lightBoxPic" src={selectedImage} />
-        <div id="lightBoxDescription">
-          <div id="lightBoxTitle">lightbox title</div>
-          <div id="lightBoxContent">
-            lightbox content content content content lightbox content content
-            content content lightbox content content content content lightbox
-            content content content content
-          </div>
-        </div>
-      </div>
-    );
-  };
-
   return (
     <div className="App">
-      <LightBox />
       <Header />
       <div id="pageContent">
-        <Row1 />
+        <Row1 data={contentDatabase} />
         <Row2 />
         <Row3 />
         <Row4 />
