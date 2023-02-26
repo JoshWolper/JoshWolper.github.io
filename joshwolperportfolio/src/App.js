@@ -1,17 +1,28 @@
+//imports
 import { useState, useEffect } from "react";
 import "./App.css";
+//json import
+import contentDatabase from "./contentDatabase.json";
+//component imports
+import LightBox from "./LightBox";
 //image imports
 import bloodClot from "./GIFs/BloodFlowWithClot.gif";
 import breadHIGH from "./GIFs/breadHIGH.gif";
 import Glacier2HIGH from "./GIFs/Glacier2HIGH.gif";
 import orangeHIGH from "./GIFs/orangeHIGH.gif";
-import contentDatabase from "./contentDatabase.json";
-import LightBox from "./LightBox";
+import quikDeform_cubeCompare from "./GIFs/quikDeform_cubeCompare.gif";
+import quikDeform_cubeRoom from "./GIFs/quikDeform_cubeRoom.gif";
+import quikDeform_flag from "./GIFs/quikDeform_flag.gif";
+import quikDeform_superman from "./GIFs/quikDeform_superman.gif";
+import quikDeform_wacky from "./GIFs/quikDeform_wacky.gif";
+import quikDeform_flagCompare from "./GIFs/quikDeform_flagCompare.gif";
 
 function App() {
   const [showLightBox, setShowLightBox] = useState(false);
   const [currentImage, setCurrentImage] = useState(null);
   const [images, setImages] = useState({});
+  const [showRow1LightBox, setShowRow1LightBox] = useState(false);
+  const [showRow4LightBox, setShowRow4LightBox] = useState(false);
 
   useEffect(() => {
     setImages({
@@ -19,6 +30,12 @@ function App() {
       breadHIGH,
       Glacier2HIGH,
       orangeHIGH,
+      quikDeform_cubeCompare,
+      quikDeform_cubeRoom,
+      quikDeform_flag,
+      quikDeform_superman,
+      quikDeform_wacky,
+      quikDeform_flagCompare,
     });
   }, []);
 
@@ -35,6 +52,12 @@ function App() {
     setShowLightBox(false);
   };
 
+  useEffect(() => {
+    if (!showLightBox) {
+      setCurrentImage(null);
+    }
+  }, [showLightBox]);
+
   const handleImageClick = (key) => {
     setCurrentImage(key);
     setShowLightBox(true);
@@ -50,12 +73,19 @@ function App() {
           </div>
         </div>
         {Object.keys(data.row1).map((key) => (
-          <div key={key} onClick={() => handleImageClick(key)}>
+          <div
+            key={key}
+            onClick={() => {
+              setShowRow4LightBox(false);
+              setShowRow1LightBox(true);
+              handleImageClick(key);
+            }}
+          >
             <img alt={data.row1[key].alt} src={images[key]} />
           </div>
         ))}
 
-        {currentImage && (
+        {showRow1LightBox && currentImage && (
           <LightBox
             showLightBox={showLightBox}
             hideLightBox={hideLightBox}
@@ -80,8 +110,43 @@ function App() {
     return <div id="row3">row three</div>;
   };
 
-  const Row4 = () => {
-    return <div id="row4">row four</div>;
+  const Row4 = ({ data }) => {
+    return (
+      <div id="row4">
+        {Object.keys(data.row4).map((key) => (
+          <div
+            key={key}
+            onClick={() => {
+              setShowRow1LightBox(false);
+              setShowRow4LightBox(true);
+              handleImageClick(key);
+            }}
+          >
+            <img alt={data.row4[key].alt} src={images[key]} />
+          </div>
+        ))}
+
+        {showRow4LightBox && currentImage && (
+          <LightBox
+            showLightBox={showLightBox}
+            hideLightBox={hideLightBox}
+            setCurrentImage={setCurrentImage}
+            currentImage={currentImage}
+            updateCurrentImage={setCurrentImage}
+            images={images}
+            alt={data.row4[currentImage].alt}
+            title={data.row4[currentImage].title}
+            description={data.row4[currentImage].description}
+          />
+        )}
+        <div className="mainDescriptionBox">
+          <h2>Some stuff</h2>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, god dammit
+          </div>
+        </div>
+      </div>
+    );
   };
 
   return (
@@ -91,7 +156,7 @@ function App() {
         <Row1 data={contentDatabase} />
         <Row2 />
         <Row3 />
-        <Row4 />
+        <Row4 data={contentDatabase} />
       </div>
     </div>
   );

@@ -112,7 +112,7 @@ html {
   overflow: hidden;
   background-color: red;
   display: grid;
-  grid-template-columns: 10% 1fr 1fr 1fr 1fr;
+  grid-template-columns: 20% 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   align-items: stretch;
 }
@@ -133,4 +133,8 @@ html {
   grid-area: row4;
   background-color: purple;
   width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 20%;
+  grid-template-rows: 1fr;
+  align-items: stretch;
 }

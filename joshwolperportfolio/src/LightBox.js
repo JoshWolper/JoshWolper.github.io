@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 const LightBox = ({
   currentImage,
@@ -9,7 +9,6 @@ const LightBox = ({
   alt,
   title,
   description,
-  updateCurrentImage,
 }) => {
   const lightBoxRef = useRef(null);
 
