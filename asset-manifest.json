@@ -1,19 +1,42 @@
 {
   "files": {
-    "main.css": "/static/css/main.580a2fe4.css",
-    "main.js": "/static/js/main.dde3e063.js",
-    "static/js/787.db63a270.chunk.js": "/static/js/787.db63a270.chunk.js",
+    "main.css": "/static/css/main.fbf45249.css",
+    "main.js": "/static/js/main.93d5a4ca.js",
+    "static/js/787.40cb6260.chunk.js": "/static/js/787.40cb6260.chunk.js",
+    "static/media/RiteGameplay2.gif": "/static/media/RiteGameplay2.9b60aa7f49aac9188fd1.gif",
+    "static/media/RiteGameplay4.gif": "/static/media/RiteGameplay4.a27877db37d79415a08f.gif",
     "static/media/Glacier2HIGH.gif": "/static/media/Glacier2HIGH.3a89f37178e9bd18f97f.gif",
+    "static/media/quikDeform_wacky.gif": "/static/media/quikDeform_wacky.c7763bc6ed439c901358.gif",
+    "static/media/RailAuthoringTool.gif": "/static/media/RailAuthoringTool.5668982c282dc3d07f76.gif",
+    "static/media/PoissonWeeds.gif": "/static/media/PoissonWeeds.5e1f6e058dbfe5fbd879.gif",
+    "static/media/CuttingWeeds.gif": "/static/media/CuttingWeeds.993132b50b12ce1daf9e.gif",
+    "static/media/CleanPoissonDirt.gif": "/static/media/CleanPoissonDirt.4b243e3d0684634bc022.gif",
+    "static/media/RiteGameplay3.gif": "/static/media/RiteGameplay3.36fc1b682778a33f2594.gif",
+    "static/media/CleanThroughDirtWall.gif": "/static/media/CleanThroughDirtWall.063b0b061c255829f881.gif",
+    "static/media/RiteGameplay1.gif": "/static/media/RiteGameplay1.92515cb0a8e36c1a00d6.gif",
+    "static/media/RailGrinding.gif": "/static/media/RailGrinding.5a0bf810cea936e7c89a.gif",
+    "static/media/DirtifyVase.gif": "/static/media/DirtifyVase.a5becbdaf12fcffcb29c.gif",
+    "static/media/RailGrindingFAST.gif": "/static/media/RailGrindingFAST.5403984b04883001968c.gif",
     "static/media/breadHIGH.gif": "/static/media/breadHIGH.8be21c10becf15bd8834.gif",
+    "static/media/CleanVase.gif": "/static/media/CleanVase.94bb9cafdb1dc61781af.gif",
     "static/media/orangeHIGH.gif": "/static/media/orangeHIGH.c2067ec08180e8a72075.gif",
+    "static/media/WhiteboardDrawing.gif": "/static/media/WhiteboardDrawing.d8ca1841da86cf7bd906.gif",
+    "static/media/quikDeform_flag.gif": "/static/media/quikDeform_flag.39e569bde99733e034bc.gif",
+    "static/media/PBDUnity_collision.gif": "/static/media/PBDUnity_collision.f7889d35c5628e5def58.gif",
+    "static/media/quikDeform_flagCompare.gif": "/static/media/quikDeform_flagCompare.8a3931e5fc1809b42d74.gif",
     "static/media/BloodFlowWithClot.gif": "/static/media/BloodFlowWithClot.b4141286e9ec21457d6a.gif",
+    "static/media/PBDUnity_interactionMethods.gif": "/static/media/PBDUnity_interactionMethods.bfd0ca4dcb241fce7bbc.gif",
+    "static/media/quikDeform_cubeCompare.gif": "/static/media/quikDeform_cubeCompare.d84d686abb34f94923ff.gif",
+    "static/media/PBDUnity_params.gif": "/static/media/PBDUnity_params.9607408a5155a41e957a.gif",
+    "static/media/quikDeform_cubeRoom.gif": "/static/media/quikDeform_cubeRoom.c6e50e66888366275867.gif",
+    "static/media/quikDeform_superman.gif": "/static/media/quikDeform_superman.06865afea5665e421cc1.gif",
     "index.html": "/index.html",
-    "main.580a2fe4.css.map": "/static/css/main.580a2fe4.css.map",
-    "main.dde3e063.js.map": "/static/js/main.dde3e063.js.map",
-    "787.db63a270.chunk.js.map": "/static/js/787.db63a270.chunk.js.map"
+    "main.fbf45249.css.map": "/static/css/main.fbf45249.css.map",
+    "main.93d5a4ca.js.map": "/static/js/main.93d5a4ca.js.map",
+    "787.40cb6260.chunk.js.map": "/static/js/787.40cb6260.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.580a2fe4.css",
-    "static/js/main.dde3e063.js"
+    "static/css/main.fbf45249.css",
+    "static/js/main.93d5a4ca.js"
   ]
 }
