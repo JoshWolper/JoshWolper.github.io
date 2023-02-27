@@ -78,10 +78,38 @@ function App() {
   }, []);
 
   const Header = () => {
+    const [showHeader, setShowHeader] = useState(false);
+    const [animationParent] = useAutoAnimate();
+
+    const handleHeaderClick = () => {
+      setShowHeader(!showHeader);
+    };
+
     return (
-      <header>
-        <div>Josh Wolper</div>
-        <div>Software Engineer</div>
+      <header ref={animationParent}>
+        <div id="headerTitle">
+          <div>Josh Wolper</div>
+          <div>Game designer and cutie pie</div>
+        </div>
+        <div id="headerButton">
+          <button onClick={handleHeaderClick}>about me/contact</button>
+        </div>
+        {showHeader && (
+          <div id="headerAbout">
+            <div>
+              Me love video games! Me play them all day long and sometimes me
+              make my own games too. Me already made a game where you can jump
+              really high and collect coins, and another game where you have to
+              solve puzzles to save the princess. Me think they are pretty good
+              games, but me want to make even better ones! Me like to use a
+              program called Scratch to make my games, and me also watch videos
+              to learn new things. Me want to make a game where you can fly like
+              a superhero and save the world from aliens. Me know it will be
+              hard work, but me am not afraid. Me love making games and me will
+              keep doing it forever!
+            </div>
+          </div>
+        )}
       </header>
     );
   };
@@ -102,8 +130,17 @@ function App() {
   };
 
   const Row1 = ({ data }) => {
+    //compare keys from row 1 to images object and create a new object with only the images that match the keys
+    let row1Images = Object.keys(data.row1).reduce((acc, key) => {
+      if (images[key]) {
+        acc[key] = images[key];
+      }
+      return acc;
+    }, {});
+    let [animationParent] = useAutoAnimate();
+
     return (
-      <div id="row1">
+      <div id="row1" ref={animationParent}>
         <div className="mainDescriptionBox">
           <h2>Some stuff</h2>
           <div>
@@ -134,7 +171,7 @@ function App() {
             setCurrentImage={setCurrentImage}
             currentImage={currentImage}
             updateCurrentImage={setCurrentImage}
-            images={images}
+            images={row1Images}
             alt={data.row1[currentImage].alt}
             title={data.row1[currentImage].title}
             description={data.row1[currentImage].description}
@@ -145,14 +182,15 @@ function App() {
   };
 
   const Row2 = ({ data }) => {
+    let row2Images = Object.keys(data.row2).reduce((acc, key) => {
+      if (images[key]) {
+        acc[key] = images[key];
+      }
+      return acc;
+    }, {});
+
     return (
       <div id="row2">
-        <div className="mainDescriptionBox">
-          <h2>Some stuff</h2>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, god dammit
-          </div>
-        </div>
         {Object.keys(data.row2).map((key) => (
           <div
             key={key}
@@ -177,17 +215,30 @@ function App() {
             setCurrentImage={setCurrentImage}
             currentImage={currentImage}
             updateCurrentImage={setCurrentImage}
-            images={images}
+            images={row2Images}
             alt={data.row2[currentImage].alt}
             title={data.row2[currentImage].title}
             description={data.row2[currentImage].description}
           />
         )}
+        <div className="mainDescriptionBox">
+          <h2>Some stuff</h2>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, god dammit
+          </div>
+        </div>
       </div>
     );
   };
 
   const Row3 = ({ data }) => {
+    let row3Images = Object.keys(data.row3).reduce((acc, key) => {
+      if (images[key]) {
+        acc[key] = images[key];
+      }
+      return acc;
+    }, {});
+
     return (
       <div id="row3">
         <div className="mainDescriptionBox">
@@ -220,7 +271,7 @@ function App() {
             setCurrentImage={setCurrentImage}
             currentImage={currentImage}
             updateCurrentImage={setCurrentImage}
-            images={images}
+            images={row3Images}
             alt={data.row3[currentImage].alt}
             title={data.row3[currentImage].title}
             description={data.row3[currentImage].description}
@@ -231,6 +282,13 @@ function App() {
   };
 
   const Row4 = ({ data }) => {
+    let row4Images = Object.keys(data.row4).reduce((acc, key) => {
+      if (images[key]) {
+        acc[key] = images[key];
+      }
+      return acc;
+    }, {});
+
     return (
       <div id="row4">
         {Object.keys(data.row4).map((key) => (
@@ -257,7 +315,7 @@ function App() {
             setCurrentImage={setCurrentImage}
             currentImage={currentImage}
             updateCurrentImage={setCurrentImage}
-            images={images}
+            images={row4Images}
             alt={data.row4[currentImage].alt}
             title={data.row4[currentImage].title}
             description={data.row4[currentImage].description}

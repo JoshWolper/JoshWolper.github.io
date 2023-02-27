@@ -1,8 +1,9 @@
 .App {
   text-align: center;
   display: grid;
-  grid-template-rows: 10% 1fr;
+  grid-template-rows: auto 1fr;
   height: 100%;
+  color: white;
 }
 
 #row1 img,
@@ -15,8 +16,15 @@
   height: 100%;
 }
 
+#row2 img {
+}
+
 .imageBox {
   position: relative;
+}
+
+.mainDescriptionBox {
+  padding: 1rem;
 }
 
 .imageBox::before {
@@ -39,6 +47,43 @@
 
 .imageBox:hover::before {
   opacity: 1;
+}
+
+header {
+  display: grid;
+  height: fit-content;
+  background-color: #000;
+  color: #fff;
+  padding: 2rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "title title button"
+    "about about about";
+}
+
+#headerTitle {
+  grid-area: title;
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  margin: 0;
+}
+
+#headerAbout {
+  grid-area: about;
+  font-size: 1rem;
+  text-align: left;
+  margin: 0;
+}
+
+#headerButton {
+  grid-area: button;
+  justify-self: end;
+  align-self: end;
+  font-size: 1rem;
+  text-align: right;
+  margin: 0;
 }
 
 #row2 {
@@ -138,36 +183,55 @@ html {
     "row4";
 }
 
+@keyframes crystalline-background {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 #row1 {
   grid-area: row1;
   overflow: hidden;
-  background-color: red;
+  background: lightcoral;
+  background-size: 100% 100%;
   display: grid;
   grid-template-columns: 20% 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   align-items: stretch;
+  text-align: right;
 }
 
 #row2 {
   grid-area: row2;
-  background-color: blue;
+  background-color: lightseagreen;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
 }
 
 #row3 {
   grid-area: row3;
-  background-color: green;
+  background-color: darkolivegreen;
   width: 100%;
   display: flex;
   flex-direction: row;
+  text-align: right;
 }
 
 #row4 {
   grid-area: row4;
-  background-color: purple;
+  background-color: lightskyblue;
   width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 20%;
   grid-template-rows: 1fr;
   align-items: stretch;
+  text-align: left;
 }
