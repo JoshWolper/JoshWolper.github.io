@@ -5,6 +5,7 @@ import "./App.css";
 import contentDatabase from "./contentDatabase.json";
 //component imports
 import LightBox from "./LightBox";
+import Header from "./Header";
 //image imports
 import bloodClot from "./GIFs/BloodFlowWithClot.gif";
 import breadHIGH from "./GIFs/breadHIGH.gif";
@@ -33,6 +34,7 @@ import RailAuthoringTool from "./GIFs/RailAuthoringTool.gif";
 import RailGrinding from "./GIFs/RailGrinding.gif";
 import RailGrindingFAST from "./GIFs/RailGrindingFAST.gif";
 import WhiteboardDrawing from "./GIFs/WhiteboardDrawing.gif";
+
 //
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 
@@ -76,43 +78,6 @@ function App() {
       WhiteboardDrawing,
     });
   }, []);
-
-  const Header = () => {
-    const [showHeader, setShowHeader] = useState(false);
-    const [animationParent] = useAutoAnimate();
-
-    const handleHeaderClick = () => {
-      setShowHeader(!showHeader);
-    };
-
-    return (
-      <header ref={animationParent}>
-        <div id="headerTitle">
-          <div>Josh Wolper</div>
-          <div>Game designer and cutie pie</div>
-        </div>
-        <div id="headerButton">
-          <button onClick={handleHeaderClick}>about me/contact</button>
-        </div>
-        {showHeader && (
-          <div id="headerAbout">
-            <div>
-              Me love video games! Me play them all day long and sometimes me
-              make my own games too. Me already made a game where you can jump
-              really high and collect coins, and another game where you have to
-              solve puzzles to save the princess. Me think they are pretty good
-              games, but me want to make even better ones! Me like to use a
-              program called Scratch to make my games, and me also watch videos
-              to learn new things. Me want to make a game where you can fly like
-              a superhero and save the world from aliens. Me know it will be
-              hard work, but me am not afraid. Me love making games and me will
-              keep doing it forever!
-            </div>
-          </div>
-        )}
-      </header>
-    );
-  };
 
   const hideLightBox = () => {
     setShowLightBox(false);
