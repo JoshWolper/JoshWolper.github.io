@@ -23,6 +23,18 @@ import RiteGameplay4 from "./GIFs/RiteGameplay4.gif";
 import PBDUnity_collision from "./GIFs/PBDUnity_collision.gif";
 import PBDUnity_interactionMethods from "./GIFs/PBDUnity_interactionMethods.gif";
 import PBDUnity_params from "./GIFs/PBDUnity_params.gif";
+import CleanPoissonDirt from "./GIFs/CleanPoissonDirt.gif";
+import CleanThroughDirtWall from "./GIFs/CleanThroughDirtWall.gif";
+import CleanVase from "./GIFs/CleanVase.gif";
+import CuttingWeeds from "./GIFs/CuttingWeeds.gif";
+import DirtifyVase from "./GIFs/DirtifyVase.gif";
+import PoissonWeeds from "./GIFs/PoissonWeeds.gif";
+import RailAuthoringTool from "./GIFs/RailAuthoringTool.gif";
+import RailGrinding from "./GIFs/RailGrinding.gif";
+import RailGrindingFAST from "./GIFs/RailGrindingFAST.gif";
+import WhiteboardDrawing from "./GIFs/WhiteboardDrawing.gif";
+//
+import { useAutoAnimate } from "@formkit/auto-animate/react";
 
 function App() {
   const [showLightBox, setShowLightBox] = useState(false);
@@ -52,6 +64,16 @@ function App() {
       PBDUnity_collision,
       PBDUnity_interactionMethods,
       PBDUnity_params,
+      CleanPoissonDirt,
+      CleanThroughDirtWall,
+      CleanVase,
+      CuttingWeeds,
+      DirtifyVase,
+      PoissonWeeds,
+      RailAuthoringTool,
+      RailGrinding,
+      RailGrindingFAST,
+      WhiteboardDrawing,
     });
   }, []);
 
@@ -122,8 +144,47 @@ function App() {
     );
   };
 
-  const Row2 = () => {
-    return <div id="row2">row two</div>;
+  const Row2 = ({ data }) => {
+    return (
+      <div id="row2">
+        <div className="mainDescriptionBox">
+          <h2>Some stuff</h2>
+          <div>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, god dammit
+          </div>
+        </div>
+        {Object.keys(data.row2).map((key) => (
+          <div
+            key={key}
+            onClick={() => {
+              setShowRow4LightBox(false);
+              setShowRow2LightBox(true);
+              setShowRow3LightBox(false);
+              setShowRow1LightBox(false);
+              handleImageClick(key);
+            }}
+            className="imageBox"
+            data-title={data.row2[key].title}
+          >
+            <img alt={data.row2[key].alt} src={images[key]} />
+          </div>
+        ))}
+
+        {showRow2LightBox && currentImage && (
+          <LightBox
+            showLightBox={showLightBox}
+            hideLightBox={hideLightBox}
+            setCurrentImage={setCurrentImage}
+            currentImage={currentImage}
+            updateCurrentImage={setCurrentImage}
+            images={images}
+            alt={data.row2[currentImage].alt}
+            title={data.row2[currentImage].title}
+            description={data.row2[currentImage].description}
+          />
+        )}
+      </div>
+    );
   };
 
   const Row3 = ({ data }) => {
@@ -217,7 +278,7 @@ function App() {
       <Header />
       <div id="pageContent">
         <Row1 data={contentDatabase} />
-        <Row2 />
+        <Row2 data={contentDatabase} />
         <Row3 data={contentDatabase} />
         <Row4 data={contentDatabase} />
       </div>
