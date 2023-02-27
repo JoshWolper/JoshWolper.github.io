@@ -1,12 +1,14 @@
 import { useState, useEffect, useRef } from "react";
 import { useAutoAnimate } from "@formkit/auto-animate/react";
 import bioPicPlaceholder from "./bioPicPlaceholder.jpeg";
-import bioShockCover from "./gameImages/bioShockCover.jpeg";
-import darkSoulsCover from "./gameImages/darkSoulsCover.jpeg";
-import groundedCover from "./gameImages/groundedCover.jpeg";
-import ootCover from "./gameImages/ootCover.jpeg";
-import outerWildsCover from "./gameImages/outerWildsCover.jpeg";
-import subnauticaCover from "./gameImages/subnauticaCover.png";
+import bioShockCover from "./gameImages/squareVersions/bioshockSquare.png";
+import darkSoulsCover from "./gameImages/squareVersions/dsSquare.png";
+import groundedCover from "./gameImages/squareVersions/groundedSquare.jpeg";
+import ootCover from "./gameImages/squareVersions/ootSquare.jpeg";
+import outerWildsCover from "./gameImages/squareVersions/outerWildsSquare.png";
+import subnauticaCover from "./gameImages/squareVersions/subnauticaSquare.png";
+import portalCover from "./gameImages/squareVersions/portalSquare.png";
+import limboCover from "./gameImages/squareVersions/limboSquare.png";
 
 const Header = () => {
   const [showHeader, setShowHeader] = useState(false);
@@ -23,6 +25,8 @@ const Header = () => {
       ootCover,
       outerWildsCover,
       subnauticaCover,
+      portalCover,
+      limboCover,
     };
     const [currentGame, setCurrentGame] = useState(Object.keys(gameImages)[0]);
     const [isFadingOut, setIsFadingOut] = useState(false);
