@@ -71,7 +71,8 @@ const Header = () => {
 
     return (
       <div id="gameCarouselWrapper">
-        <div id="gameCarouselTitle">My Favorites</div>
+        <div id="gameCarouselTitle">favorite games</div>
+        <br />
         <div id="gameCarousel" ref={gameCarouselRef}>
           <img id="gameCarouselPic" src={imgSrc} style={imgStyle} />
         </div>
@@ -82,8 +83,7 @@ const Header = () => {
   return (
     <header ref={animationParent}>
       <div id="headerTitle">
-        <div>Josh Wolper</div>
-        <div>Physics Simulation PhD Turned Game Dev</div>
+        <div>josh wolper | physics simulation PhD turned game dev</div>
       </div>
       <div id="headerButton">
         <button onClick={handleHeaderClick}>about me/contact</button>

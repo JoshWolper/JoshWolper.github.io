@@ -1,145 +1,253 @@
 {
+  "header": {
+    "heading": "josh wolper",
+    "subheading": "Physics Simulation PhD turned game dev",
+    "bio": "Forever an avid gamer, I've always been energized by the intersection of art and science. In my PhD, this manifested as a love for developing computational algorithms to simulate material fracture for animation practitioners and engineers alike. More recently, I picked up UE5 and rekindled a passion for designing and implementing gameplay systems. Now, I'm excited to bring the breadth of skills I gained in CG research to the world of game dev! I'm a quick learner, and a strong generalist, well-versed in playing many roles in tough projects and communicating with interdisciplinary teammates."
+  },
+  "rowDescriptions": {
+    "row1": {
+      "title": "Large Scale Programming and Visualization",
+      "description": "Throughout my PhD and postdoctoral research I developed myriad skills in computer science and engineering",
+      "skills": {
+        "c++": "C++ (3D Math, Linear Algebra, Iterative Solvers)",
+        "c++Templates": "C++ Templates and Parallelization (tbb, CUDA)",
+        "git": "Git (collaborative version control)",
+        "python": "Python (batch scripting)",
+        "data": "Data oriented programming (large scale data for simulation)",
+        "architecture": "Architecture (for better DOP and efficiency)",
+        "algorithm": "Algorithmic Design (efficient & accurate physics simulation)",
+        "communication": "Science Communication (international conferences)",
+        "codebases": {
+          "description": "Published open-source codebases",
+          "links": {
+            "ziran2019": "https://github.com/penn-graphics-research/ziran2019",
+            "ziran2020": "https://github.com/penn-graphics-research/ziran2020"
+          }
+        },
+        "houdini": "Houdini (scripting, openVDB, rendering)"
+      }
+    },
+    "row2": {
+      "title": "GraveTender: Unreal Engine 5 Personal Project",
+      "description": "In my free-time, I’m working on GraveTender, a fast-paced but cozy game about cleaning a long-forgotten graveyard. I’m designing and implementing all the gameplay systems as well as authoring tools for asset creation.",
+      "skills": {
+        "unreal": "Unreal Engine 5",
+        "blueprint": "Blueprint",
+        "gameplay": "Gameplay Design and Programming",
+        "authoring": "Authoring Tool Design"
+      }
+    },
+    "row3": {
+      "title": "Unity Projects",
+      "description": {
+        "text": "Two Unity Engine based projects from my undergrad days:['RITE: Funded by the Swarthmore College Halpern Engineering Design Fund, I spent a summer teaching myself Unity and making a prototype of a 2D puzzle platformer about a boy entering the spirit world (inspired by LIMBO). The art was done by my incredibly talented partner, Matt Alexander!','Then, for my senior thesis at Swarthmore College, I built an interactive soft-body physics sandbox in Unity by implementing Position Based Dynamics. All demos shown have no Unity physics, just my PBD.']",
+        "links": {
+          "Position Based Dynamics": "https://www.cs.toronto.edu/~jacobson/seminar/mueller-et-al-2007.pdf"
+        }
+      },
+      "skills": {
+        "unity": "Unity Engine",
+        "c#": "C#",
+        "rigging": "Rigging and Animation with Inverse Kinematics",
+        "gameplay": "Gameplay Design and Programming",
+        "physics": "Real-time Physics Simulation"
+      }
+    },
+    "row4": "gameplay systems"
+  },
   "row1": {
     "breadHIGH": {
       "alt": "bread tearing",
-      "title": "oprah loves bread",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
+      "title": "CD-MPM",
+      "description": {
+        "text": "she loves it so much that she eats it calmly and professionally in order to maintain decorum",
+        "links": {
+          "Website": "https://joshuahwolper.com/cdmpm",
+          "Video Overview": "https://www.youtube.com/watch?v=zTDi7I7oIfY",
+          "Paper PDF": "https://href.li/?https://dl.acm.org/doi/pdf/10.1145/3306346.3322949",
+          "Code": "https://href.li/?https://github.com/squarefk/ziran2019",
+          "Two Minute Papers": "https://www.youtube.com/watch?v=9IqRdEs4_JU"
+        }
+      }
     },
     "Glacier2HIGH": {
       "alt": "glacier",
-      "title": "oprah loves glaciers",
-      "description": "what a calm, professional lady"
+      "title": "Glacier-Ocean Dynamics",
+      "description": {
+        "text": "My research in animating material fracture is closely inspired by approaches from engineering. So, naturally, these techniques can also be used for real-world engineering! Published in the still-nascent Nature Communications Earth & Environment, this exciting work presents an MPM based simulation framework for modeling large-scale tsunamigenic glacial calving, enabling the improvement of assessment and mitigation measures in coastal regions. In this final work of my PhD, I had the exciting opportunity to work with snow and ice experts to develop a brand-new plasticity treatment for glacial ice. Pictured here, we simulate a tsunamigenic glacial calving event and render the view as if on a boat experiencing the waves. Here are some links to learn more!",
+        "links": {
+          "Video Overview": "https://www.youtube.com/watch?v=7IC_ehdH7ZM",
+          "Nature Open Access": "https://www.nature.com/articles/s43247-021-00179-7"
+        }
+      }
     },
     "orangeHIGH": {
-      "alt": "orange",
-      "title": "oprah love orange",
-      "description": "eat em up yum yum"
+      "alt": "orange tearing",
+      "title": "AnisoMPM",
+      "description": {
+        "text": "AnisoMPM presents a cutting-edge approach for animating anisotropic fracture. Our system captures all modes of anisotropic materials, and improves significantly on the performance of CD-MPM through an explicit approach to the damage solve. I presented this work at SIGGRAPH 2020 and subsequently released the open-source code. Pictured here, we simulate tearing an orange slice to reveal its juicy radial anisotropy. Here are some links to learn more!",
+        "links": {
+          "SIGHGRAPH 2020": "https://www.youtube.com/watch?v=tiQ5MKp_PV8&t=490s",
+          "Website": "https://joshuahwolper.com/anisompm",
+          "Video Overview": "https://www.youtube.com/watch?v=eXJi7pkUZn0",
+          "Paper PDF": "https://href.li/?https://dl.acm.org/doi/pdf/10.1145/3386569.3392428",
+          "Code": "https://href.li/?https://github.com/penn-graphics-research/ziran20200",
+          "Two Minute Papers": "https://www.youtube.com/watch?v=fE9BqmJrrW0"
+        }
+      }
     },
     "bloodClot": {
-      "alt": "blood clot",
-      "title": "blood clot",
-      "description": "oprah loves her family and pays her taxes"
+      "alt": "blood clot simulation",
+      "title": "Medical Simulation",
+      "description": "In my current postdoctoral research, I've joined a team of mechanics, computational biology experts, and doctors to simulate the complex multi-material effects that blood flow and arterial tissues have on blood clot fracture dynamics. My role as the MPM expert is to develop new computational methods for coupling all of these complex materials together while accurately modeling and visualizing physical attributes like velocity, damage, and chemical potential. Pictured here is a simulation of blood flow through a partially obstructed vessel with velocity visualized using a color ramp. We have one manuscript out for review, and another down the line, but nothing official to share just yet!"
+    }
+  },
+  "row2": {
+    "RailAuthoringTool": {
+      "alt": "rail authoring tool in unreal engine",
+      "title": "Spline Mesh Rail Authoring Tool",
+      "description": "Rail grinding plays a large role in GraveTender, so I watched some tutorials and implemented a rail authoring tool using a Spline and Spline Mesh Components. I also designed and added looping rail functionality and a circular rail generator. Here I demonstrate using this tool to build a rail system that doubles back on itself and with a looping element. I also added functionality to generate evenly-spaced collectible pickups along any region of the rail."
+    },
+    "RailGrinding": {
+      "alt": "rail grinding in unreal engine game",
+      "title": "Rail Grinding",
+      "description": "With the rail system in place, the player character can now freely grind on the rails! My design supports leaving and entering the rail at any point with a jump, grinding in both directions along the spline, infinite loops, and variable speeds. Rail entry is generous, designed to begin upon overlap with a large trigger radius on the player character."
+    },
+    "RailGrindingFAST": {
+      "alt": "fast rail grinding in unreal engine game",
+      "title": "Fast Grails",
+      "description": "Eventually, extremely fast rails like these can be used by the player to evade captors and quickly traverse long distances."
+    },
+    "DirtifyVase": {
+      "alt": "dirt system in unreal engine",
+      "title": "ISM Dirt System",
+      "description": {
+        "text": "Designed and implemented a dirt system and a water spray mechanic to clean it. Dirt is designed as an Instanced Static Mesh with discrete clumps of varying sizes. These clumps can be hit with the player’s water spray line traces, and subsequently “cleaned”/hidden in the ISM. I designed and implemented two ways to author dirt patches. First, shown here, is an actor component called “Dirtify” that shoots randomly sampled line traces at an actor and places dirt at these locations. The second, the “Poisson Dirt Box”, is inspired by my MPM research and is an implementation of 3D Poisson Disk which uses blue noise to evenly distribute points in a volume. This easily enables the authoring of rectangular volumes of player-cleanable dirt for the purposes of hiding secrets/items and even blocking pathways.",
+        "links": {
+          "3D Poisson Disk": "https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf"
+        }
+      }
+    },
+    "CleanPoissonDirt": {
+      "alt": "cleaning dirt in unreal engine",
+      "title": "Cleaning Dirt Away",
+      "description": "With the vase actor “Dirtified”, the player can now spray water at the dirt and clean the vase! Each dirt patch has a parameter for what percentage of dirt clump instances a player must clean before the remaining patches fade away."
+    },
+    "CleanVase": {
+      "alt": "cleaning vase in unreal engine",
+      "title": "Revealing a Secret",
+      "description": {
+        "text": "With the vase actor “Dirtified”, the player can now spray water at the dirt and clean the vase! Each dirt patch has a parameter for what percentage of dirt clump instances a player must clean before the remaining patches fade away.",
+        "links": {
+          "Poisson Disk": "https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf"
+        }
+      }
+    },
+    "CleanThroughDirtWall": {
+      "alt": "cleaning through dirt wall in unreal engine",
+      "title": "Clearing a Path",
+      "description": {
+        "text": "Here, a Poisson Dirt Box is shown blocking the path! My Poisson Dirt Boxes are designed to implement Poisson Disk sampling for evenly distributed dirt clump instances. See “ISM Dirt System” for more detail!",
+        "links": {
+          "Poisson Disk": "https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf"
+        }
+      }
+    },
+    "WhiteboardDrawing": {
+      "alt": "whiteboard drawing",
+      "title": "Whiteboard Drawing",
+      "description": "Here, the player is using the water spray in another context: drawing! This 2D Render Target based approach was my original idea for the dirt cleaning system, but computing the percent coverage was incredibly expensive (some heavy CPU-exclusive computations). So, instead, I retooled this system into a drawing mechanic in the player’s hub area!"
+    },
+    "PoissonWeeds": {
+      "alt": "poisson weeds",
+      "title": "Poisson Weed Generation",
+      "description": {
+        "text": "Cutting down weeds and other plants is a core part of GraveTender, so I designed and implemented a method for evenly sampling weeds while respecting existing level geometry. This uses a 2D version of the Poisson Disk sampling algorithm where samples are additionally tested for validity by shooting a sphere trace from the sky down to the sample to determine whether it’s far enough from level geometry. Shown here is this process, where I visualize the samples first as dirt clump instances on the ground. Then, once satisfied with the distribution, weed actors are generated at these positions with randomized meshes and rotations.",
+        "links": {
+          "Poisson Disk": "https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf"
+        }
+      }
+    },
+    "CuttingWeeds": {
+      "alt": "cutting weeds",
+      "title": "Cutting Weeds",
+      "description": "Once we generate all these weeds, it’s time to cut them down! Weed actors have a Procedural Mesh copy of their static mesh, and this allows the player to fire projectile slashes that procedurally cut down weeds!"
     }
   },
   "row3": {
     "RiteGameplay1": {
-      "alt": "rite 1",
-      "title": "rite 1",
-      "description": "oprah loves her family and pays her taxes"
+      "alt": "log puzzle and drowning in unity",
+      "title": "Log Puzzle and Drowning",
+      "description": "Using a rock collected nearby, the boy breaks through a support holding up a log. Using the raised log, he leaps to a nearby vine but misses, sinking into the murky water below. The boy was animated using 2D Sprites and Bones with Inverse Kinematics, and the water uses a 2D water package."
     },
     "RiteGameplay2": {
-      "alt": "rite 2",
-      "title": "blood rite",
-      "description": "oprah loves her family and pays her taxes"
+      "alt": "vine swinging and floating platforms in unity game",
+      "title": "Vine Swinging and Floating Platforms",
+      "description": "The boy swings from vine to vine, using his momentum to gain distance, until finally leaping onto a path of floating logs. Vines are implemented as 2D segments connected by dampening joints, and the player must hold the directional keys to swing and gain momentum. The player is able to climb up and down the rope, all while being welded to one vine segment at a time. The floating logs use the buoyant force supplied by the 2D water package."
     },
     "RiteGameplay3": {
-      "alt": "rite 3",
-      "title": "blood clot",
-      "description": "oprah loves her family and pays her taxes"
+      "alt": "push/pull objects and ledge climbing in unity game",
+      "title": "Push/Pull Objects and Ledge Climbing",
+      "description": "The boy reaches a high ledge, and notices that the rock at the base is loose. By pulling out the rock chunk, the boy is able to grab and climb the ledges, reaching the top. I never did figure out back then how to do the ledge climbing animation, but now I want to go back and do it with IK hand targets!"
     },
+
     "RiteGameplay4": {
-      "alt": "rite 4",
-      "title": "blood",
-      "description": "oprah loves her family and pays her taxes"
+      "alt": "ladders and vine puzzle in unity game",
+      "title": "Ladders and Vine Puzzle",
+      "description": "The boy reaches a sheer cliff face rising up and into the trees above. A ladder sits above him, just out of reach. Instead, he climbs a nearby ladder carved into a tree, and by equipping a small dagger he found earlier, cuts through a nearby vine. The vine swings down, allowing the boy to swing to the high ladder and escape into the treetops. The ladder system uses similar functionality to the vine climbing/swinging in terms of character control."
+    },
+    "PBDUnity_interactionMethods": {
+      "alt": "pdb interaction methods",
+      "title": "Two Interaction Modes",
+      "description": "I implemented two interaction modes: a force push mode which allows the user to apply an external force vector at the click location, and a uniform stretch mode where all the vertices would uniformly expand outwards and give an elastic inflation effect on the clicked object. Here, a cube floats with no gravity and is pushed by a user. Then, the cube sits with gravity and is uniformly stretched, giving it a little bounce."
     },
     "PBDUnity_collision": {
       "alt": "pbd collision",
-      "title": "pbd collision",
-      "description": "oprah loves her family and pays her taxes"
-    },
-    "PBDUnity_interactionMethods": {
-      "alt": "pdb clot",
-      "title": "blood pdb",
-      "description": "oprah loves her family and pays her taxes"
+      "title": "Multi-object Collision",
+      "description": {
+        "text": "In Position Based Dynamics, collisions are handled in the constraint projection routine. In my implementation, collision constraints are implemented as inequality constraints on vertex-object penetration.",
+        "links": {
+          "Position Based Dynamics": "https://www.cs.toronto.edu/~jacobson/seminar/mueller-et-al-2007.pdf"
+        }
+      }
     },
     "PBDUnity_params": {
-      "alt": "pbd clot",
-      "title": "pbd clot",
-      "description": "oprah loves her family and pays her taxes"
+      "alt": "pbd parameter comparison",
+      "title": "Parameter Comparison",
+      "description": "Here I visualized the difference between strengths (stiffnesses) of the bending constraints. As expected, the lower the bending stiffness, the more the sphere collapses under gravity. When gravity is turned off, the spheres regain their shape at different rates."
     }
   },
-  "row2": {
-    "CleanPoissonDirt": {
-      "alt": "bread tearing",
-      "title": "cube compare",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
-    },
-    "CleanThroughDirtWall": {
-      "alt": "bread tearing",
-      "title": "cube compare",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
-    },
-    "CleanVase": {
-      "alt": "bread tearing",
-      "title": "cube compare",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
-    },
-    "CuttingWeeds": {
-      "alt": "bread tearing",
-      "title": "cube compare",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
-    },
-    "DirtifyVase": {
-      "alt": "bread tearing",
-      "title": "cube compare",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
-    },
-    "PoissonWeeds": {
-      "alt": "bread tearing",
-      "title": "cube compare",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
-    },
-    "RailAuthoringTool": {
-      "alt": "bread tearing",
-      "title": "cube compare",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
-    },
-    "RailGrinding": {
-      "alt": "bread tearing",
-      "title": "cube compare",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
-    },
-    "RailGrindingFAST": {
-      "alt": "bread tearing",
-      "title": "cube compare",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
-    },
-    "WhiteboardDrawing": {
-      "alt": "bread tearing",
-      "title": "cube compare",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
-    }
-  },
+
   "row4": {
-    "quikDeform_cubeCompare": {
-      "alt": "bread tearing",
-      "title": "cube compare",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
-    },
     "quikDeform_cubeRoom": {
-      "alt": "bread tearing",
-      "title": "cube room",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
+      "alt": "cube room demo",
+      "title": "Cube Room Demo",
+      "description": "['Here an artist is able to add a volumetric solid cube to a room of planar collision constraints. Then, an external force is added by the artist to the cube, and the physics based animation is then added to the Maya timeline!', 'With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.']"
     },
     "quikDeform_flag": {
-      "alt": "bread tearing",
-      "title": "flag",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
+      "alt": "flagpole demo",
+      "title": "Flagpole Demo",
+      "description": "['Here, our 2D strain constraint is shown off, allowing the animation of coplanar thin-shell elasticity like this waving flag! The artist adds our optional wind force vector as the external force to enable this animation. Note that this strictly uses 2D strain constraints, no bending for simplicity!','With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.']"
+    },
+    "quikDeform_cubeCompare": {
+      "alt": "cube resolution comparison",
+      "title": "Resolution Comparison",
+      "description": "['Naturally, the resolution of the 3D volume representation is crucial to the possible elastic effects. Here, from left to right the cube uses the starting low res mesh, a tetgen mesh, and a Maya subdivision mesh. Fortunately, Maya already provides the best solution for this simple geometry!','With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.']"
     },
     "quikDeform_flagCompare": {
-      "alt": "bread tearing",
-      "title": "flag",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
+      "alt": "flag stiffness comparison",
+      "title": "Stiffness Comparison",
+      "description": "['Here the effect of the material stiffness parameter is explored. From left to right the flags use Young’s modulus of 500, 1000, and 5000, giving progressively stiffer behavior. This gives a good idea of how artistically controllable the Projective Dynamics method is, as well as the rich control enabled by QuikDeform!','With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.']"
     },
     "quikDeform_superman": {
-      "alt": "bread tearing",
-      "title": "supermang",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
+      "alt": "superman",
+      "title": "Superman",
+      "description": "['Here we show off QuikDeform’s potential to easily add physics based animation to a turntable character. This example shows off the 2D strain and position constraints as well as coplanar elasticity.','With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.']"
     },
     "quikDeform_wacky": {
-      "alt": "bread tearing",
-      "title": "wacky lol",
-      "description": "she loves it so much that she eats it calmly and professionally in order to maintain decorum"
+      "alt": "wacky waving inflatable arm flailing tubeman",
+      "title": "Wacky Waving",
+      "description": "['Here a wacky waving inflatable arm flailing tubeman drums up attention outside the local Subway, showing off our 3D strain and position constraints. This 3D elastic animation is driven by an upwards wind vector placed by the artist.','With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.']"
     }
   }
 }

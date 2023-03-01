@@ -72,13 +72,28 @@ header {
   display: grid;
   height: fit-content;
   background-color: #000;
+
   color: #fff;
-  padding: 2rem;
+  padding: 1rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr auto;
   grid-template-areas:
     "title title button"
     "about about about";
+}
+
+header:before {
+  background-image: url("./crystalPattern.svg");
+  background-size: 50%;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  opacity: 0.3;
+  pointer-events: none;
 }
 
 #headerTitle {
@@ -93,18 +108,20 @@ header {
   grid-area: about;
   font-size: 1rem;
   text-align: left;
-  margin-top: 3%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr;
-  grid-template-areas: "pic text text text game game";
+  gap: 1%;
+  grid-template-areas: "pic text text text text game";
   align-items: center;
 }
 
 #aboutText {
   grid-area: text;
+  justify-self: center;
   height: fit-content;
-  text-align: center;
+  text-align: justify;
+  line-height: 1.5rem;
 }
 
 #gameCarousel img {
@@ -124,6 +141,7 @@ header {
 #faveGamesHolder {
   grid-area: game;
   text-align: center;
+  justify-self: start;
 }
 
 #headerButton {
@@ -137,16 +155,17 @@ header {
 
 #headerPic {
   grid-area: pic;
-  width: 80%;
-  height: 70%;
-  border-radius: 4000%;
+  width: 60%;
+  height: 60%;
+  justify-self: end;
 }
 
 #headerPic img {
   object-fit: cover;
   width: 100%;
   height: 100%;
-  border-radius: 5000px;
+  border-radius: 10px;
+  border: 1px solid #fff;
 }
 
 html {
