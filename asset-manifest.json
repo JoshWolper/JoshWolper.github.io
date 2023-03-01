@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.fbf45249.css",
-    "main.js": "/static/js/main.93d5a4ca.js",
+    "main.css": "/static/css/main.5bb433b4.css",
+    "main.js": "/static/js/main.dd065f7d.js",
     "static/js/787.40cb6260.chunk.js": "/static/js/787.40cb6260.chunk.js",
     "static/media/RiteGameplay2.gif": "/static/media/RiteGameplay2.9b60aa7f49aac9188fd1.gif",
     "static/media/RiteGameplay4.gif": "/static/media/RiteGameplay4.a27877db37d79415a08f.gif",
@@ -30,13 +30,23 @@
     "static/media/PBDUnity_params.gif": "/static/media/PBDUnity_params.9607408a5155a41e957a.gif",
     "static/media/quikDeform_cubeRoom.gif": "/static/media/quikDeform_cubeRoom.c6e50e66888366275867.gif",
     "static/media/quikDeform_superman.gif": "/static/media/quikDeform_superman.06865afea5665e421cc1.gif",
+    "static/media/subnauticaSquare.png": "/static/media/subnauticaSquare.9365119ba9217b4ecc62.png",
+    "static/media/dsSquare.png": "/static/media/dsSquare.28efef8d1adb92c8c0b8.png",
+    "static/media/outerWildsSquare.png": "/static/media/outerWildsSquare.9e4b53db6474f55e08d6.png",
+    "static/media/portalSquare.png": "/static/media/portalSquare.2a52b86f8b8fcaae8a17.png",
+    "static/media/bioshockSquare.png": "/static/media/bioshockSquare.983b4338c7c188f1f6b7.png",
+    "static/media/ootSquare.jpeg": "/static/media/ootSquare.6355f0ab0a4207f019eb.jpeg",
+    "static/media/groundedSquare.jpeg": "/static/media/groundedSquare.912ae3e544af91053a52.jpeg",
+    "static/media/bioPicPlaceholder.jpeg": "/static/media/bioPicPlaceholder.5743af1cc0a571a36d23.jpeg",
+    "static/media/limboSquare.png": "/static/media/limboSquare.e20c3c6ee42c685da566.png",
+    "static/media/crystalPattern.svg": "/static/media/crystalPattern.0131b3f73bcf0ea8fbe8.svg",
     "index.html": "/index.html",
-    "main.fbf45249.css.map": "/static/css/main.fbf45249.css.map",
-    "main.93d5a4ca.js.map": "/static/js/main.93d5a4ca.js.map",
+    "main.5bb433b4.css.map": "/static/css/main.5bb433b4.css.map",
+    "main.dd065f7d.js.map": "/static/js/main.dd065f7d.js.map",
     "787.40cb6260.chunk.js.map": "/static/js/787.40cb6260.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbf45249.css",
-    "static/js/main.93d5a4ca.js"
+    "static/css/main.5bb433b4.css",
+    "static/js/main.dd065f7d.js"
   ]
 }
