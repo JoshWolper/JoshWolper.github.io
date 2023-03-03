@@ -10,7 +10,8 @@ import subnauticaCover from "./gameImages/squareVersions/subnauticaSquare.png";
 import portalCover from "./gameImages/squareVersions/portalSquare.png";
 import limboCover from "./gameImages/squareVersions/limboSquare.png";
 
-const Header = () => {
+const Header = (props) => {
+  const { headerContent } = props;
   const [showHeader, setShowHeader] = useState(false);
   const [animationParent] = useAutoAnimate();
 
@@ -46,7 +47,7 @@ const Header = () => {
       }, 3000);
 
       return () => clearInterval(intervalId);
-    }, [currentGame, gameImages]);
+    }, [currentGame]);
 
     const handlePrevClick = () => {
       const keys = Object.keys(gameImages);
@@ -83,28 +84,20 @@ const Header = () => {
   return (
     <header ref={animationParent}>
       <div id="headerTitle">
-        <div>josh wolper | physics simulation PhD turned game dev</div>
-      </div>
-      <div id="headerButton">
-        <button onClick={handleHeaderClick}>about me/contact</button>
+        <div>
+          <div id="headerName">{headerContent.heading}</div>
+          <div id="headerSub">{headerContent.subheading}</div>
+        </div>
+        <button id="headerButton" onClick={handleHeaderClick}>
+          about me/contact
+        </button>
       </div>
       {showHeader && (
         <div id="headerAbout">
           <div id="headerPic">
             <img src={bioPicPlaceholder} alt="bio pic" />
           </div>
-          <div id="aboutText">
-            Forever an avid gamer, I've always been energized by the
-            intersection of art and science. In my PhD, this manifested as a
-            love for developing computational algorithms to simulate material
-            fracture for animation practitioners and engineers alike. More
-            recently, I picked up UE5 and rekindled a passion for designing and
-            implementing gameplay systems. Now, I'm excited to bring the breadth
-            of skills I gained in CG research to the world of game dev! I’m a
-            quick learner, and a strong generalist, well-versed in playing many
-            roles in tough projects and communicating with interdisciplinary
-            teammates.
-          </div>
+          <div id="aboutText">{headerContent.bio}</div>
           <div id="faveGamesHolder">
             <FaveGamesCarousel />
           </div>

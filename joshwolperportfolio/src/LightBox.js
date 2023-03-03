@@ -11,7 +11,6 @@ const LightBox = ({
   description,
 }) => {
   const lightBoxRef = useRef(null);
-
   const handlePrevClick = () => {
     const keys = Object.keys(images);
     const currentIndex = keys.indexOf(currentImage);
@@ -36,6 +35,32 @@ const LightBox = ({
       }
     }
   }, [currentImage]);
+
+  function lightBoxDescription() {
+    if (description.links) {
+      const links = Object.entries(description.links)
+        .map(([description, url]) => (
+          <a
+            target="_blank"
+            rel="noreferrer"
+            key={description}
+            href={url}
+            id="lightBoxLink"
+          >
+            {description}
+          </a>
+        ))
+        .reduce((prev, curr) => [prev, ", ", curr]);
+      return (
+        <div id="lightBoxDescriptionText">
+          {description.text}
+          <br /> {links}
+        </div>
+      );
+    } else {
+      return <div id="lightBoxDescriptionText">{description}</div>;
+    }
+  }
 
   return (
     <div id="lightBoxWrapper">
@@ -64,7 +89,7 @@ const LightBox = ({
           <img id="lightBoxPic" src={imgSrc} alt={alt} />
           <div id="lightBoxDescription">
             <div id="lightBoxTitle">{title}</div>
-            <div id="lightBoxContent">{description}</div>
+            <div id="lightBoxContent">{lightBoxDescription()}</div>
           </div>
         </div>
       )}

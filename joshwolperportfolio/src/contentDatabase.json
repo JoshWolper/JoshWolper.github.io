@@ -60,7 +60,7 @@
       "alt": "bread tearing",
       "title": "CD-MPM",
       "description": {
-        "text": "she loves it so much that she eats it calmly and professionally in order to maintain decorum",
+        "text": "My first primary authored publication, CD-MPM, presents two state-of-the-art approaches for animating continuum fracture. Already cited over 60 times, the techniques herein have been adopted into industry research and commercial products alike. I presented this work at SIGGRAPH 2019 and subsequently released the open-source code. Pictured here, we animate tearing a fresh piece of bread with 11 million PFF-MPM particles. Here are some links to learn more!",
         "links": {
           "Website": "https://joshuahwolper.com/cdmpm",
           "Video Overview": "https://www.youtube.com/watch?v=zTDi7I7oIfY",

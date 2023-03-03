@@ -21,6 +21,34 @@
   height: 100%;
 }
 
+#skillsWrapper ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-auto-rows: min-content;
+  align-items: stretch;
+  justify-content: center;
+}
+
+#skillsWrapper ul li {
+  margin: 0.2rem;
+  padding: 0.2rem;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-size: 0.7rem;
+  font-weight: 300;
+  text-align: center;
+  display: block;
+  z-index: 500;
+}
+
+#skillsWrapper a {
+  font-weight: 600;
+  text-decoration: none;
+}
+
 #row1:before {
   content: "";
   position: absolute;
@@ -44,7 +72,34 @@
 }
 
 .mainDescriptionBox {
-  padding: 1rem;
+  padding: 0.3rem;
+  grid-area: title;
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: baseline;
+  justify-content: start;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.7);
+}
+
+.mainDescriptionBox h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 0.5rem 0 0;
+}
+
+.mainDescriptionBox h2:after {
+  content: " | ";
+  margin: 0.5rem 0 0 0;
+  font-weight: 200;
+}
+
+.mainDescriptionBox > div {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+  font-style: italic;
 }
 
 .imageBox::before {
@@ -55,13 +110,19 @@
   left: 50;
   background-color: rgba(255, 255, 255, 0.4);
   color: #fff;
-  border-radius: 600% 600% 0 0;
+  border-radius: 600px 600px 0 0;
   text-align: center;
-  backdrop-filter: blur(75px);
   font-size: 1.5rem;
   opacity: 0;
   transition: opacity 0.1s ease-in-out;
   z-index: 2;
+  font-weight: 700;
+}
+
+#row1 .imageBox::before {
+  background-color: rgba(240, 128, 128, 0.5) !important;
+  box-sizing: border-box;
+  border-bottom: none !important;
 }
 
 .imageBox:hover::before {
@@ -71,29 +132,20 @@
 header {
   display: grid;
   height: fit-content;
-  background-color: #000;
-
+  background: radial-gradient(
+    circle at 0% 0%,
+    rgba(96, 143, 123, 1) 0%,
+    rgba(6, 131, 147, 1) 50%,
+    rgba(60, 0, 60, 1) 100%
+  );
   color: #fff;
   padding: 1rem;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr auto;
   grid-template-areas:
-    "title title button"
+    "title title title"
     "about about about";
-}
-
-header:before {
-  background-image: url("./crystalPattern.svg");
-  background-size: 50%;
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  z-index: 0;
-  opacity: 0.3;
-  pointer-events: none;
+  text-shadow: 4px 0px 10px lightskyblue;
 }
 
 #headerTitle {
@@ -102,6 +154,42 @@ header:before {
   font-weight: 700;
   text-align: left;
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+header button {
+  outline: none;
+  border: none;
+  background-color: lightseagreen;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 300;
+  padding: 0.5rem;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-right: 3% !important;
+}
+
+#headerName {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0.5rem 0 0;
+}
+
+#headerSub {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+  font-style: italic;
+}
+
+#headerAbout {
+  text-shadow: none;
+  font-weight: 300;
 }
 
 #headerAbout {
@@ -146,10 +234,8 @@ header:before {
 
 #headerButton {
   grid-area: button;
-  justify-self: end;
-  align-self: end;
   font-size: 1rem;
-  text-align: right;
+  text-align: center;
   margin: 0;
 }
 
@@ -178,7 +264,20 @@ html {
   width: 100vw;
 }
 
+#lightBoxTitle {
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+#lightBoxDescriptionText {
+  font-size: 1.5rem;
+  font-weight: 200 !important;
+  text-align: left;
+  line-height: 1.6rem;
+}
+
 #lightBox {
+  transition: opacity 0.3s ease-in-out;
   display: grid;
   position: fixed;
   top: 0;
@@ -190,12 +289,13 @@ html {
   z-index: 1000;
   color: white;
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
-  grid-template-rows: 5% 1fr 1fr 1fr;
+  grid-template-rows: 5% 1fr 1fr 1fr 5%;
   grid-template-areas:
     "close close close close close"
-    "prev pic pic pic next"
-    "prev pic pic pic next"
-    "prev description description description next";
+    "prev pic pic description next"
+    "prev pic pic description next"
+    "prev pic pic description next"
+    "bottom bottom bottom bottom bottom";
 }
 
 #gameCarouselTitle {
@@ -234,27 +334,38 @@ html {
   grid-area: pic;
   justify-self: center;
   align-self: center;
-  width: 100%;
-  height: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  min-width: 80%;
+  min-height: 80%;
+  max-width: 80%;
+  max-height: 80%;
+  border-radius: 10px;
 }
 
 #lightBoxPic img {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
+  border-radius: 10px;
 }
 
 #lightBoxDescription {
   grid-area: description;
-  justify-self: center;
+  justify-self: start;
   align-self: center;
   font-size: 1.5rem;
-  text-align: center;
-  margin: 1rem;
+  text-align: left;
   width: 65%;
+}
+
+#lightBox a {
+  color: lightskyblue;
+  text-decoration: none;
+  font-weight: 800;
+}
+
+#lightBox a:hover {
+  color: white;
+  transition: 0.2s ease;
 }
 
 #pageContent {
@@ -287,19 +398,33 @@ html {
   background: lightcoral;
   background-size: 100% 100%;
   display: grid;
-  grid-template-columns: 20% 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
+  grid-template-columns: 15% 1fr 1fr 1fr 1fr;
+  grid-template-rows: 60px 1fr;
   align-items: stretch;
   text-align: right;
+  grid-template-areas:
+    "title title title title title"
+    "skills pic pic pic pic";
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+}
+
+#picsHolder {
+  grid-area: pics;
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
 }
 
 #row2 {
   grid-area: row2;
   background-color: lightseagreen;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 10% 1fr 1fr 1fr 1fr;
+  grid-template-rows: 60px 1fr 1fr;
   text-align: left;
+  grid-template-areas:
+    "title title title title title title"
+    "skills pics pics pics pics pics"
+    "skills pics pics pics pics pics";
 }
 
 #row3 {

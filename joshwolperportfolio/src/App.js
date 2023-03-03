@@ -1,5 +1,5 @@
 //imports
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import "./App.css";
 //json import
 import contentDatabase from "./contentDatabase.json";
@@ -46,6 +46,7 @@ function App() {
   const [showRow2LightBox, setShowRow2LightBox] = useState(false);
   const [showRow3LightBox, setShowRow3LightBox] = useState(false);
   const [showRow4LightBox, setShowRow4LightBox] = useState(false);
+  const rowDescriptions = contentDatabase.rowDescriptions;
 
   useEffect(() => {
     setImages({
@@ -94,6 +95,37 @@ function App() {
     setShowLightBox(true);
   };
 
+  const SkillsList = ({ skills }) => {
+    return (
+      <ul id="skillsContainer">
+        {Object.entries(skills).map(([key, value]) => {
+          if (value.links) {
+            const links = Object.entries(value.links)
+              .map(([description, url]) => (
+                <a
+                  target="_blank"
+                  rel="noreferrer"
+                  key={description}
+                  href={url}
+                >
+                  {description}
+                </a>
+              ))
+              .reduce((prev, curr) => [prev, ", ", curr]);
+            return (
+              <li key={key}>
+                {value.description}
+                <br /> ({links})
+              </li>
+            );
+          } else {
+            return <li key={key}>{value}</li>;
+          }
+        })}
+      </ul>
+    );
+  };
+
   const Row1 = ({ data }) => {
     //compare keys from row 1 to images object and create a new object with only the images that match the keys
     let row1Images = Object.keys(data.row1).reduce((acc, key) => {
@@ -107,10 +139,13 @@ function App() {
     return (
       <div id="row1" ref={animationParent}>
         <div className="mainDescriptionBox">
-          <h2>Some stuff</h2>
+          <h2>{rowDescriptions.row1.title}</h2>
           <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, god dammit
+            <p>{rowDescriptions.row1.description}</p>
           </div>
+        </div>
+        <div id="skillsWrapper">
+          <SkillsList skills={rowDescriptions.row1.skills} />
         </div>
         {Object.keys(data.row1).map((key) => (
           <div
@@ -156,22 +191,31 @@ function App() {
 
     return (
       <div id="row2">
-        {Object.keys(data.row2).map((key) => (
-          <div
-            key={key}
-            onClick={() => {
-              setShowRow4LightBox(false);
-              setShowRow2LightBox(true);
-              setShowRow3LightBox(false);
-              setShowRow1LightBox(false);
-              handleImageClick(key);
-            }}
-            className="imageBox"
-            data-title={data.row2[key].title}
-          >
-            <img alt={data.row2[key].alt} src={images[key]} />
-          </div>
-        ))}
+        <div className="mainDescriptionBox">
+          <h2>{rowDescriptions.row2.title}</h2>
+          <div>{rowDescriptions.row2.description}</div>
+        </div>
+        <div id="skillsWrapper">
+          <SkillsList skills={rowDescriptions.row2.skills} />
+        </div>
+        <div id="picsHolder">
+          {Object.keys(data.row2).map((key) => (
+            <div
+              key={key}
+              onClick={() => {
+                setShowRow4LightBox(false);
+                setShowRow2LightBox(true);
+                setShowRow3LightBox(false);
+                setShowRow1LightBox(false);
+                handleImageClick(key);
+              }}
+              className="imageBox"
+              data-title={data.row2[key].title}
+            >
+              <img alt={data.row2[key].alt} src={images[key]} />
+            </div>
+          ))}
+        </div>
 
         {showRow2LightBox && currentImage && (
           <LightBox
@@ -186,12 +230,6 @@ function App() {
             description={data.row2[currentImage].description}
           />
         )}
-        <div className="mainDescriptionBox">
-          <h2>Some stuff</h2>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, god dammit
-          </div>
-        </div>
       </div>
     );
   };
@@ -298,7 +336,7 @@ function App() {
 
   return (
     <div className="App">
-      <Header />
+      <Header headerContent={contentDatabase.header} />
       <div id="pageContent">
         <Row1 data={contentDatabase} />
         <Row2 data={contentDatabase} />
