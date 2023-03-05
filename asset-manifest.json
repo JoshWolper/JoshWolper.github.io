@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.5bb433b4.css",
-    "main.js": "/static/js/main.dd065f7d.js",
+    "main.css": "/static/css/main.625b6587.css",
+    "main.js": "/static/js/main.bc7b8a82.js",
     "static/js/787.40cb6260.chunk.js": "/static/js/787.40cb6260.chunk.js",
     "static/media/RiteGameplay2.gif": "/static/media/RiteGameplay2.9b60aa7f49aac9188fd1.gif",
     "static/media/RiteGameplay4.gif": "/static/media/RiteGameplay4.a27877db37d79415a08f.gif",
@@ -39,14 +39,13 @@
     "static/media/groundedSquare.jpeg": "/static/media/groundedSquare.912ae3e544af91053a52.jpeg",
     "static/media/bioPicPlaceholder.jpeg": "/static/media/bioPicPlaceholder.5743af1cc0a571a36d23.jpeg",
     "static/media/limboSquare.png": "/static/media/limboSquare.e20c3c6ee42c685da566.png",
-    "static/media/crystalPattern.svg": "/static/media/crystalPattern.0131b3f73bcf0ea8fbe8.svg",
     "index.html": "/index.html",
-    "main.5bb433b4.css.map": "/static/css/main.5bb433b4.css.map",
-    "main.dd065f7d.js.map": "/static/js/main.dd065f7d.js.map",
+    "main.625b6587.css.map": "/static/css/main.625b6587.css.map",
+    "main.bc7b8a82.js.map": "/static/js/main.bc7b8a82.js.map",
     "787.40cb6260.chunk.js.map": "/static/js/787.40cb6260.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.5bb433b4.css",
-    "static/js/main.dd065f7d.js"
+    "static/css/main.625b6587.css",
+    "static/js/main.bc7b8a82.js"
   ]
 }
