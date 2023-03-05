@@ -1,22 +1,20 @@
 {
   "header": {
     "heading": "josh wolper",
-    "subheading": "Physics Simulation PhD turned game dev",
+    "subheading": "Computer Graphics PhD turned game dev",
     "bio": "Forever an avid gamer, I've always been energized by the intersection of art and science. In my PhD, this manifested as a love for developing computational algorithms to simulate material fracture for animation practitioners and engineers alike. More recently, I picked up UE5 and rekindled a passion for designing and implementing gameplay systems. Now, I'm excited to bring the breadth of skills I gained in CG research to the world of game dev! I'm a quick learner, and a strong generalist, well-versed in playing many roles in tough projects and communicating with interdisciplinary teammates."
   },
   "rowDescriptions": {
     "row1": {
       "title": "Large Scale Programming and Visualization",
-      "description": "Throughout my PhD and postdoctoral research I developed myriad skills in computer science and engineering",
+      "description": "Throughout my PhD and postdoctoral research I developed myriad skills in computer science and engineering. Working in large interdisciplinary teams, I developed and published computational techniques and codebases for animating material fracture. Already cited over 100 times, my work spans simulation for computer graphics and real-world engineering alike!",
       "skills": {
-        "c++": "C++ (3D Math, Linear Algebra, Iterative Solvers)",
-        "c++Templates": "C++ Templates and Parallelization (tbb, CUDA)",
-        "git": "Git (collaborative version control)",
-        "python": "Python (batch scripting)",
-        "data": "Data oriented programming (large scale data for simulation)",
-        "architecture": "Architecture (for better DOP and efficiency)",
-        "algorithm": "Algorithmic Design (efficient & accurate physics simulation)",
-        "communication": "Science Communication (international conferences)",
+        "c++": "C++ for 3D Math & Linear Algebra",
+        "c++Templates": "C++ Templates & Parallelization",
+        "git": "Git",
+        "python": "Python",
+        "data": "Data Oriented Programming & Architecture",
+        "communication": "Science Communication",
         "codebases": {
           "description": "Published open-source codebases",
           "links": {
@@ -24,7 +22,7 @@
             "ziran2020": "https://github.com/penn-graphics-research/ziran2020"
           }
         },
-        "houdini": "Houdini (scripting, openVDB, rendering)"
+        "houdini": "Houdini"
       }
     },
     "row2": {
