@@ -7,6 +7,11 @@
   overflow-x: hidden;
 }
 
+#root {
+  padding-left: 4%;
+  padding-right: 4%;
+}
+
 #row1 img,
 #row2 img,
 #row3 img,
@@ -85,6 +90,15 @@
   opacity: 1;
 }
 
+#skillWLinks {
+  display: flex;
+  flex-direction: column !important;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  height: 100%;
+}
+
 .imageBox {
   position: relative;
   width: 100%;
@@ -98,6 +112,10 @@
   justify-content: start;
   align-items: baseline;
   align-content: center;
+}
+
+#row1 .mainDescriptionBox {
+  flex-direction: column !important;
 }
 
 .mainDescriptionBox h2 {

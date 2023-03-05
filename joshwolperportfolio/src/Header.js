@@ -49,20 +49,6 @@ const Header = (props) => {
       return () => clearInterval(intervalId);
     }, [currentGame]);
 
-    const handlePrevClick = () => {
-      const keys = Object.keys(gameImages);
-      const currentIndex = keys.indexOf(currentGame);
-      const prevIndex = (currentIndex - 1 + keys.length) % keys.length;
-      setCurrentGame(keys[prevIndex]);
-    };
-
-    const handleNextClick = () => {
-      const keys = Object.keys(gameImages);
-      const currentIndex = keys.indexOf(currentGame);
-      const nextIndex = (currentIndex + 1) % keys.length;
-      setCurrentGame(keys[nextIndex]);
-    };
-
     const imgSrc = gameImages[currentGame];
     const imgStyle = {
       opacity: isFadingOut ? 0 : 1,

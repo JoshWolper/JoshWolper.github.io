@@ -145,13 +145,13 @@ function App() {
                   {description}
                 </a>
               ))
-              .reduce((prev, curr) => [prev, ", ", curr]);
+              .reduce((prev, curr) => [prev, " | ", curr]);
             console.log("links is");
             console.table(links);
             return (
-              <div key={key}>
+              <div key={key} id="skillWLinks">
                 {value.description}
-                <br /> ({links.join("")})
+                <br /> <div id="skillLink">{links}</div>
               </div>
             );
           } else {
