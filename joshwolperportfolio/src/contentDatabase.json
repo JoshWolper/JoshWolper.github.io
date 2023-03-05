@@ -76,6 +76,21 @@
         }
       }
     },
+    "orangeHIGH": {
+      "alt": "orange tearing",
+      "title": "AnisoMPM",
+      "description": {
+        "text": "AnisoMPM presents a cutting-edge approach for animating anisotropic fracture. Our system captures all modes of anisotropic materials, and improves significantly on the performance of CD-MPM through an explicit approach to the damage solve. I presented this work at SIGGRAPH 2020 and subsequently released the open-source code. Pictured here, we simulate tearing an orange slice to reveal its juicy radial anisotropy. Here are some links to learn more!",
+        "links": {
+          "SIGHGRAPH 2020 Virtual Presentation": "https://www.youtube.com/watch?v=tiQ5MKp_PV8&t=490s",
+          "Website": "https://joshuahwolper.com/anisompm",
+          "Video Overview": "https://www.youtube.com/watch?v=eXJi7pkUZn0",
+          "Paper PDF": "https://href.li/?https://dl.acm.org/doi/pdf/10.1145/3386569.3392428",
+          "Code": "https://href.li/?https://github.com/penn-graphics-research/ziran2020",
+          "Two Minute Papers": "https://www.youtube.com/watch?v=fE9BqmJrrW0"
+        }
+      }
+    },
     "Glacier2HIGH": {
       "alt": "glacier",
       "title": "Glacier-Ocean Dynamics",
@@ -84,21 +99,6 @@
         "links": {
           "Video Overview": "https://www.youtube.com/watch?v=7IC_ehdH7ZM",
           "Nature Open Access": "https://www.nature.com/articles/s43247-021-00179-7"
-        }
-      }
-    },
-    "orangeHIGH": {
-      "alt": "orange tearing",
-      "title": "AnisoMPM",
-      "description": {
-        "text": "AnisoMPM presents a cutting-edge approach for animating anisotropic fracture. Our system captures all modes of anisotropic materials, and improves significantly on the performance of CD-MPM through an explicit approach to the damage solve. I presented this work at SIGGRAPH 2020 and subsequently released the open-source code. Pictured here, we simulate tearing an orange slice to reveal its juicy radial anisotropy. Here are some links to learn more!",
-        "links": {
-          "SIGHGRAPH 2020": "https://www.youtube.com/watch?v=tiQ5MKp_PV8&t=490s",
-          "Website": "https://joshuahwolper.com/anisompm",
-          "Video Overview": "https://www.youtube.com/watch?v=eXJi7pkUZn0",
-          "Paper PDF": "https://href.li/?https://dl.acm.org/doi/pdf/10.1145/3386569.3392428",
-          "Code": "https://href.li/?https://github.com/penn-graphics-research/ziran20200",
-          "Two Minute Papers": "https://www.youtube.com/watch?v=fE9BqmJrrW0"
         }
       }
     },
@@ -134,16 +134,16 @@
         }
       }
     },
-    "CleanPoissonDirt": {
+    "CleanVase": {
       "alt": "cleaning dirt in unreal engine",
       "title": "Cleaning Dirt Away",
       "description": "With the vase actor “Dirtified”, the player can now spray water at the dirt and clean the vase! Each dirt patch has a parameter for what percentage of dirt clump instances a player must clean before the remaining patches fade away."
     },
-    "CleanVase": {
+    "CleanPoissonDirt": {
       "alt": "cleaning vase in unreal engine",
       "title": "Revealing a Secret",
       "description": {
-        "text": "With the vase actor “Dirtified”, the player can now spray water at the dirt and clean the vase! Each dirt patch has a parameter for what percentage of dirt clump instances a player must clean before the remaining patches fade away.",
+        "text": "Here, a Poisson Dirt Box is shown hiding a secret collectible! My Poisson Dirt Boxes are designed to implement Poisson Disk sampling for evenly distributed dirt clump instances. See “ISM Dirt System” for more detail!",
         "links": {
           "Poisson Disk": "https://www.cs.ubc.ca/~rbridson/docs/bridson-siggraph07-poissondisk.pdf"
         }
@@ -186,7 +186,7 @@
       "title": "Log Puzzle and Drowning",
       "description": "Using a rock collected nearby, the boy breaks through a support holding up a log. Using the raised log, he leaps to a nearby vine but misses, sinking into the murky water below. The boy was animated using 2D Sprites and Bones with Inverse Kinematics, and the water uses a 2D water package."
     },
-    "RiteGameplay2": {
+    "RiteGameplay4": {
       "alt": "vine swinging and floating platforms in unity game",
       "title": "Vine Swinging and Floating Platforms",
       "description": "The boy swings from vine to vine, using his momentum to gain distance, until finally leaping onto a path of floating logs. Vines are implemented as 2D segments connected by dampening joints, and the player must hold the directional keys to swing and gain momentum. The player is able to climb up and down the rope, all while being welded to one vine segment at a time. The floating logs use the buoyant force supplied by the 2D water package."
@@ -197,7 +197,7 @@
       "description": "The boy reaches a high ledge, and notices that the rock at the base is loose. By pulling out the rock chunk, the boy is able to grab and climb the ledges, reaching the top. I never did figure out back then how to do the ledge climbing animation, but now I want to go back and do it with IK hand targets!"
     },
 
-    "RiteGameplay4": {
+    "RiteGameplay2": {
       "alt": "ladders and vine puzzle in unity game",
       "title": "Ladders and Vine Puzzle",
       "description": "The boy reaches a sheer cliff face rising up and into the trees above. A ladder sits above him, just out of reach. Instead, he climbs a nearby ladder carved into a tree, and by equipping a small dagger he found earlier, cuts through a nearby vine. The vine swings down, allowing the boy to swing to the high ladder and escape into the treetops. The ladder system uses similar functionality to the vine climbing/swinging in terms of character control."
