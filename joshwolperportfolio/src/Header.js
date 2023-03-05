@@ -44,7 +44,7 @@ const Header = (props) => {
           setCurrentGame(keys[nextIndex]);
           setIsFadingOut(false);
         }, 500); // wait for fade out transition to complete before updating image
-      }, 3000);
+      }, 1500);
 
       return () => clearInterval(intervalId);
     }, [currentGame]);

@@ -131,7 +131,7 @@ function App() {
 
   const SkillsList = ({ skills }) => {
     return (
-      <div id="skillsContainer">
+      <ul id="skillsContainer">
         {Object.entries(skills).map(([key, value]) => {
           if (value.links) {
             const links = Object.entries(value.links)
@@ -149,16 +149,16 @@ function App() {
             console.log("links is");
             console.table(links);
             return (
-              <div key={key} id="skillWLinks">
+              <li key={key} id="skillWLinks">
                 {value.description}
                 <br /> <div id="skillLink">{links}</div>
-              </div>
+              </li>
             );
           } else {
-            return <div key={key}>{value}</div>;
+            return <li key={key}>{value}</li>;
           }
         })}
-      </div>
+      </ul>
     );
   };
 
@@ -364,22 +364,24 @@ function App() {
         <div id="skillsWrapper">
           <SkillsList skills={rowDescriptions.row4.skills} />
         </div>
-        {Object.keys(data.row4).map((key) => (
-          <div
-            key={key}
-            onClick={() => {
-              setShowRow1LightBox(false);
-              setShowRow2LightBox(false);
-              setShowRow3LightBox(false);
-              setShowRow4LightBox(true);
-              handleImageClick(key);
-            }}
-            className="imageBox"
-            data-title={data.row4[key].title}
-          >
-            <img alt={data.row4[key].alt} src={images[key]} />
-          </div>
-        ))}
+        <div id="row4Pics">
+          {Object.keys(data.row4).map((key) => (
+            <div
+              key={key}
+              onClick={() => {
+                setShowRow1LightBox(false);
+                setShowRow2LightBox(false);
+                setShowRow3LightBox(false);
+                setShowRow4LightBox(true);
+                handleImageClick(key);
+              }}
+              className="imageBox"
+              data-title={data.row4[key].title}
+            >
+              <img alt={data.row4[key].alt} src={images[key]} />
+            </div>
+          ))}
+        </div>
         {showRow4LightBox && currentImage && (
           <LightBox
             showLightBox={showLightBox}

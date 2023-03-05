@@ -1,3 +1,21 @@
+:root {
+  --myBlack: rgb(53, 53, 53);
+  --myOrange: rgb(255, 159, 26);
+  --myGlaucous: rgb(180, 185, 239);
+  --myMint: rgb(213, 255, 243);
+  --mySatBlue: rgb(72, 172, 240);
+}
+
+@font-face {
+  font-family: latexSerif;
+  src: url("./cmunbx.ttf");
+}
+
+@font-face {
+  font-family: latexSans;
+  src: url("./cmunss.ttf");
+}
+
 .App {
   text-align: center;
   display: grid;
@@ -5,11 +23,13 @@
   height: 100%;
   color: white;
   overflow-x: hidden;
+  font-family: latexSans !important;
 }
 
-#root {
-  padding-left: 4%;
-  padding-right: 4%;
+h2 {
+  margin: 0;
+  font-family: latexSerif;
+  font-size: 30px !important;
 }
 
 #row1 img,
@@ -22,23 +42,30 @@
   height: 100%;
 }
 
+#row1,
+#row3 {
+  background-color: var(--myBlack);
+}
+
+#row2,
+#row4 {
+  background-color: #171717;
+}
+
 #gameCarouselPic {
   width: 100%;
   height: 100%;
 }
 
-#row1 #skillsContainer {
-  height: 30rem !important;
-}
-
 #skillsWrapper {
   grid-area: skills;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: stretch;
+  align-content: stretch;
 }
 
-#row1 #skillsWrapper > div > div {
-  display: flex;
-  flex-direction: row;
-}
 #skillsContainer {
   margin: 0;
   padding: 0;
@@ -51,20 +78,19 @@
   height: 100%;
 }
 
-#skillsWrapper > div > div {
-  margin: 0.2rem;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+#skillsWrapper li {
+  padding: 0.5rem;
   font-size: 1rem;
   font-weight: 300;
-  text-align: center;
+  text-align: right !important;
   z-index: 500;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  align-items: center;
-  align-content: center;
+  align-items: flex-end;
+  align-content: flex-end;
+  border-right: 2px solid;
 }
 
 #skillsWrapper a {
@@ -72,22 +98,68 @@
   text-decoration: none;
 }
 
-#row1:before {
+#row1 #skillsWrapper li {
+  border-color: var(--mySatBlue);
+}
+
+#row1Pics:before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  box-shadow: inset 0px -20px 50px lightcoral;
-  z-index: 1;
+  box-shadow: inset 0px 0px 150px var(--mySatBlue);
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
+  z-index: 1;
 }
 
-#row1:hover:before {
+#picsHolder:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0px 0px 150px var(--myOrange);
   opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#row4Pics:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0px 0px 100px var(--myGlaucous);
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#row3Pics:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0px 0px 150px var(--myMint);
+  opacity: 1;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+#row3Pics {
+  position: relative;
 }
 
 #skillWLinks {
@@ -107,11 +179,11 @@
 .mainDescriptionBox {
   grid-area: title;
   text-align: left;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: baseline;
-  align-content: center;
+  display: grid;
+  grid-template-columns: auto 70%;
+  z-index: 2;
+  padding: 1%;
+  align-items: center;
 }
 
 #row1 .mainDescriptionBox {
@@ -121,13 +193,19 @@
 .mainDescriptionBox h2 {
   font-size: 1.5rem;
   font-weight: 700;
+  text-align: center;
 }
 
 .mainDescriptionBox > div {
   font-size: 1rem;
   font-weight: 300;
   margin: 0;
-  font-style: italic;
+  border-left: 2px solid;
+  padding-left: 2%;
+}
+
+#row1 .mainDescriptionBox > div {
+  border-color: var(--mySatBlue);
 }
 
 .imageBox::before {
@@ -136,8 +214,7 @@
   position: absolute;
   bottom: 0;
   left: 50;
-  background-color: rgba(255, 255, 255, 0.4);
-  color: #fff;
+  color: var(--myBlack);
   border-radius: 600px 600px 0 0;
   text-align: center;
   font-size: 1.5rem;
@@ -145,16 +222,45 @@
   transition: opacity 0.1s ease-in-out;
   z-index: 2;
   font-weight: 700;
+  box-sizing: border-box;
+  border-bottom: none !important;
+  text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+  padding: 2% 0 2% 0%;
 }
 
 #row1 .imageBox::before {
-  background-color: rgba(240, 128, 128, 0.5) !important;
-  box-sizing: border-box;
-  border-bottom: none !important;
+  background-color: var(--mySatBlue) !important;
+}
+
+#row2 .imageBox::before {
+  background-color: var(--myOrange) !important;
+}
+
+#row3 .imageBox::before {
+  background-color: var(--myMint) !important;
+}
+
+#row4 .imageBox::before {
+  background-color: var(--myGlaucous) !important;
 }
 
 .imageBox:hover::before {
   opacity: 1;
+}
+
+#row2 li,
+#row2 div {
+  border-color: var(--myOrange) !important;
+}
+
+#row3 li,
+#row3 div {
+  border-color: var(--myMint) !important;
+}
+
+#row4 li,
+#row4 div {
+  border-color: var(--myGlaucous) !important;
 }
 
 header {
@@ -173,6 +279,9 @@ header {
     "title title title"
     "about about about";
   text-shadow: 4px 0px 10px lightskyblue;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  padding: 1%;
 }
 
 #headerTitle {
@@ -215,28 +324,30 @@ header button {
 }
 
 #headerAbout {
-  text-shadow: none;
-  font-weight: 300;
-}
-
-#headerAbout {
   grid-area: about;
   font-size: 1rem;
   text-align: left;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 15% auto auto;
   grid-template-rows: 1fr;
   gap: 1%;
-  grid-template-areas: "pic text text text text game";
-  align-items: center;
+  grid-template-areas: "pic game text";
+  align-items: last baseline;
+  margin-top: -3%;
+  justify-items: center;
+  text-shadow: none;
+  font-weight: 300;
+  pointer-events: none;
+  height: fit-content;
 }
 
 #aboutText {
   grid-area: text;
-  justify-self: center;
-  height: fit-content;
+  justify-self: start;
   text-align: justify;
-  line-height: 1.5rem;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  width: 70%;
 }
 
 #gameCarousel img {
@@ -351,6 +462,7 @@ html {
   align-self: center;
   font-size: 2rem;
   cursor: pointer;
+  padding: 40%;
 }
 
 #lightBoxNext {
@@ -359,24 +471,22 @@ html {
   align-self: center;
   font-size: 2rem;
   cursor: pointer;
+  padding: 40%;
 }
 
 #lightBoxPic {
   grid-area: pic;
   justify-self: center;
   align-self: center;
-  min-width: 80%;
-  min-height: 80%;
-  max-width: 80%;
-  max-height: 80%;
-  border-radius: 10px;
+  width: fit-content;
+  height: 100%;
+  overflow: hidden;
 }
 
 #lightBoxPic img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
   border-radius: 10px;
+  object-fit: contain;
+  overflow: hidden;
 }
 
 #lightBoxDescription {
@@ -395,7 +505,7 @@ html {
 }
 
 #lightBox a:hover {
-  color: white;
+  color: var(--myBlack);
   transition: 0.2s ease;
 }
 
@@ -425,7 +535,6 @@ html {
 
 #row1 {
   grid-area: row1;
-  background: lightcoral;
   background-size: 100% 100%;
   display: grid;
   grid-template-columns: 15% 1fr;
@@ -442,6 +551,11 @@ html {
   display: grid;
   grid-template-columns: auto auto auto auto auto;
   grid-template-rows: auto auto;
+  border-radius: 30px 30px 0 0;
+  margin-left: 1%;
+  margin-right: 1%;
+  overflow: hidden;
+  position: relative;
 }
 
 #row1Pics {
@@ -449,11 +563,15 @@ html {
   display: grid;
   grid-template-columns: auto auto auto auto;
   grid-template-rows: auto;
+  border-radius: 30px 30px 0 0;
+  margin-left: 1%;
+  margin-right: 1%;
+  overflow: hidden;
+  position: relative;
 }
 
 #row2 {
   grid-area: row2;
-  background-color: lightseagreen;
   display: grid;
   grid-template-columns: 15% 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: auto 1fr;
@@ -466,7 +584,6 @@ html {
 
 #row3 {
   grid-area: row3;
-  background-color: darkolivegreen;
   display: grid;
   grid-template-columns: 15% 1fr;
   grid-template-rows: auto auto;
@@ -481,12 +598,28 @@ html {
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: auto;
-  width: 100%;
   align-items: stretch;
   justify-items: stretch;
   grid-template-areas:
     "row3row1"
     "row3row2";
+  border-radius: 30px 30px 0 0;
+  margin-left: 1%;
+  margin-right: 1%;
+  overflow: hidden;
+  position: relative;
+}
+
+#row4Pics {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  grid-area: pics;
+  border-radius: 30px 30px 0 0;
+  margin-left: 1%;
+  margin-right: 1%;
+  overflow: hidden;
+  position: relative;
 }
 
 #row3Row1 {
@@ -512,14 +645,13 @@ html {
 
 #row4 {
   grid-area: row4;
-  background-color: lightskyblue;
   width: 100%;
   display: grid;
-  grid-template-columns: 15% 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 15% 1fr;
   grid-template-rows: auto 1fr;
   align-items: stretch;
   text-align: right;
   grid-template-areas:
-    "skills title title title title title title"
-    "skills pic pic pic pic pic pic";
+    "skills title"
+    "skills pics";
 }
