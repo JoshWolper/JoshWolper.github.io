@@ -40,7 +40,7 @@
     "row3": {
       "title": "Unity Projects",
       "description": {
-        "text": "Two Unity Engine based projects from my undergrad days:['RITE: Funded by the Swarthmore College Halpern Engineering Design Fund, I spent a summer teaching myself Unity and making a prototype of a 2D puzzle platformer about a boy entering the spirit world (inspired by LIMBO). The art was done by my incredibly talented partner, Matt Alexander!','Then, for my senior thesis at Swarthmore College, I built an interactive soft-body physics sandbox in Unity by implementing Position Based Dynamics. All demos shown have no Unity physics, just my PBD.']",
+        "text": "<PB>Two Unity Engine based projects from my undergrad days:<PE><PB>RITE: Funded by the Swarthmore College Halpern Engineering Design Fund, I spent a summer teaching myself Unity and making a prototype of a 2D puzzle platformer about a boy entering the spirit world (inspired by LIMBO). The art was done by my incredibly talented partner, Matt Alexander!<PE><PB>Then, for my senior thesis at Swarthmore College, I built an interactive soft-body physics sandbox in Unity by implementing Position Based Dynamics. All demos shown have no Unity physics, just my PBD.<PE>",
         "links": {
           "Position Based Dynamics": "https://www.cs.toronto.edu/~jacobson/seminar/mueller-et-al-2007.pdf"
         }
@@ -53,7 +53,15 @@
         "physics": "Real-time Physics Simulation"
       }
     },
-    "row4": "gameplay systems"
+    "row4": {
+      "title": "Maya Authoring Tool for Physics Animation",
+      "description": "QuikDeform: In my graduate coursework at UPenn (CIS660 Advanced Topics in CG) I had the opportunity to implement a SIGGRAPH paper and turn it into an authoring tool in Maya. We designed QuikDeform, a Projective Dynamics plug-in that enables an artist to quickly design and control soft-body physics animations. My contribution was the C++ physics solver and design of the tool.",
+      "skills": {
+        "c++": "C++ (DOP with Eigen Linear Algebra)",
+        "authoring": "Authoring tool design",
+        "physics": "Real-time Physics Simulation"
+      }
+    }
   },
   "row1": {
     "breadHIGH": {

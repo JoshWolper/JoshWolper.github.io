@@ -95,9 +95,43 @@ function App() {
     setShowLightBox(true);
   };
 
+  const Description = ({ description }) => {
+    function formatDescription(description) {
+      if (typeof description === "object" && description.links) {
+        // if the description has a links object, replace strings matching the link keys with anchor tags
+        let formattedText = description.text;
+        Object.keys(description.links).forEach((key) => {
+          const link = description.links[key];
+          formattedText = formattedText.replace(
+            key,
+            `<a href="${link}" target="_blank" rel="noreferrer">${key}</a>`
+          );
+        });
+        return formattedText;
+      } else {
+        // if there is no links object, just return the value of the "description" key's value
+        return description;
+      }
+    }
+
+    const formattedDescription = formatDescription(description);
+
+    // separate the formatted text into paragraphs
+    const paragraphs = formattedDescription
+      .split("<PB>")
+      .map((p, i) => (
+        <p
+          key={i}
+          dangerouslySetInnerHTML={{ __html: p.replace("<PE>", "") }}
+        />
+      ));
+
+    return <div>{paragraphs}</div>;
+  };
+
   const SkillsList = ({ skills }) => {
     return (
-      <ul id="skillsContainer">
+      <div id="skillsContainer">
         {Object.entries(skills).map(([key, value]) => {
           if (value.links) {
             const links = Object.entries(value.links)
@@ -112,17 +146,19 @@ function App() {
                 </a>
               ))
               .reduce((prev, curr) => [prev, ", ", curr]);
+            console.log("links is");
+            console.table(links);
             return (
-              <li key={key}>
+              <div key={key}>
                 {value.description}
-                <br /> ({links})
-              </li>
+                <br /> ({links.join("")})
+              </div>
             );
           } else {
-            return <li key={key}>{value}</li>;
+            return <div key={key}>{value}</div>;
           }
         })}
-      </ul>
+      </div>
     );
   };
 
@@ -140,29 +176,29 @@ function App() {
       <div id="row1" ref={animationParent}>
         <div className="mainDescriptionBox">
           <h2>{rowDescriptions.row1.title}</h2>
-          <div>
-            <p>{rowDescriptions.row1.description}</p>
-          </div>
+          <Description description={rowDescriptions.row1.description} />
         </div>
         <div id="skillsWrapper">
           <SkillsList skills={rowDescriptions.row1.skills} />
         </div>
-        {Object.keys(data.row1).map((key) => (
-          <div
-            key={key}
-            onClick={() => {
-              setShowRow4LightBox(false);
-              setShowRow2LightBox(false);
-              setShowRow3LightBox(false);
-              setShowRow1LightBox(true);
-              handleImageClick(key);
-            }}
-            className="imageBox"
-            data-title={data.row1[key].title}
-          >
-            <img alt={data.row1[key].alt} src={images[key]} />
-          </div>
-        ))}
+        <div id="row1Pics">
+          {Object.keys(data.row1).map((key) => (
+            <div
+              key={key}
+              onClick={() => {
+                setShowRow1LightBox(true);
+                setShowRow2LightBox(false);
+                setShowRow3LightBox(false);
+                setShowRow4LightBox(false);
+                handleImageClick(key);
+              }}
+              className="imageBox"
+              data-title={data.row1[key].title}
+            >
+              <img alt={data.row1[key].alt} src={images[key]} />
+            </div>
+          ))}
+        </div>
 
         {showRow1LightBox && currentImage && (
           <LightBox
@@ -203,10 +239,10 @@ function App() {
             <div
               key={key}
               onClick={() => {
-                setShowRow4LightBox(false);
-                setShowRow2LightBox(true);
-                setShowRow3LightBox(false);
                 setShowRow1LightBox(false);
+                setShowRow4LightBox(false);
+                setShowRow3LightBox(false);
+                setShowRow2LightBox(true);
                 handleImageClick(key);
               }}
               className="imageBox"
@@ -245,27 +281,54 @@ function App() {
     return (
       <div id="row3">
         <div className="mainDescriptionBox">
-          <h2>Some stuff</h2>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, god dammit
+          <h2>{rowDescriptions.row3.title}</h2>
+          <Description description={rowDescriptions.row3.description} />
+        </div>
+        <div id="skillsWrapper">
+          <SkillsList skills={rowDescriptions.row3.skills} />
+        </div>
+        <div id="row3Pics">
+          <div id="row3Row1">
+            {Object.keys(data.row3)
+              .slice(0, 4)
+              .map((key) => (
+                <div
+                  key={key}
+                  onClick={() => {
+                    setShowRow1LightBox(false);
+                    setShowRow4LightBox(false);
+                    setShowRow3LightBox(true);
+                    setShowRow2LightBox(false);
+                    handleImageClick(key);
+                  }}
+                  className="imageBox"
+                  data-title={data.row3[key].title}
+                >
+                  <img alt={data.row3[key].alt} src={images[key]} />
+                </div>
+              ))}
+          </div>
+          <div id="row3Row2">
+            {Object.keys(data.row3)
+              .slice(4, 7)
+              .map((key) => (
+                <div
+                  key={key}
+                  onClick={() => {
+                    setShowRow1LightBox(false);
+                    setShowRow4LightBox(false);
+                    setShowRow3LightBox(true);
+                    setShowRow2LightBox(false);
+                    handleImageClick(key);
+                  }}
+                  className="imageBox"
+                  data-title={data.row3[key].title}
+                >
+                  <img alt={data.row3[key].alt} src={images[key]} />
+                </div>
+              ))}
           </div>
         </div>
-        {Object.keys(data.row3).map((key) => (
-          <div
-            key={key}
-            className="imageBox"
-            onClick={() => {
-              setShowRow4LightBox(false);
-              setShowRow1LightBox(false);
-              setShowRow2LightBox(false);
-              setShowRow3LightBox(true);
-              handleImageClick(key);
-            }}
-            data-title={data.row3[key].title}
-          >
-            <img alt={data.row3[key].alt} src={images[key]} />
-          </div>
-        ))}
 
         {showRow3LightBox && currentImage && (
           <LightBox
@@ -294,6 +357,13 @@ function App() {
 
     return (
       <div id="row4">
+        <div className="mainDescriptionBox">
+          <h2>{rowDescriptions.row4.title}</h2>
+          <Description description={rowDescriptions.row4.description} />
+        </div>
+        <div id="skillsWrapper">
+          <SkillsList skills={rowDescriptions.row4.skills} />
+        </div>
         {Object.keys(data.row4).map((key) => (
           <div
             key={key}
@@ -310,7 +380,6 @@ function App() {
             <img alt={data.row4[key].alt} src={images[key]} />
           </div>
         ))}
-
         {showRow4LightBox && currentImage && (
           <LightBox
             showLightBox={showLightBox}
@@ -324,12 +393,6 @@ function App() {
             description={data.row4[currentImage].description}
           />
         )}
-        <div className="mainDescriptionBox">
-          <h2>Some stuff</h2>
-          <div>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, god dammit
-          </div>
-        </div>
       </div>
     );
   };
