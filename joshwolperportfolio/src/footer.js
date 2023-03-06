@@ -76,7 +76,7 @@ const Footer = () => {
     <footer id="footer">
       <FaveGamesCarousel />
       <div id="resumeBlock" onClick={downloadResume}>
-        <div id="resume">my resume</div>
+        <div id="resume">resume</div>
         <img id="resumeThumbnail" src={resumeThumbnail} />
       </div>
       <a

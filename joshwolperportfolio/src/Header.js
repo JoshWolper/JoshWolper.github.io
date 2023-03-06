@@ -37,7 +37,7 @@ const Header = (props) => {
           about me
         </button>
         <button id="resume" onClick={downloadResume}>
-          my resume
+          resume
         </button>
       </div>
       {showHeader && (
