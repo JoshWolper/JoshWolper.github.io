@@ -6,6 +6,7 @@ import contentDatabase from "./contentDatabase.json";
 //component imports
 import LightBox from "./LightBox";
 import Header from "./Header";
+import Footer from "./footer";
 //image imports
 import bloodClot from "./GIFs/BloodFlowWithClot.gif";
 import breadHIGH from "./GIFs/breadHIGH.gif";
@@ -401,12 +402,13 @@ function App() {
 
   return (
     <div className="App">
-      <Header headerContent={contentDatabase.header} />
       <div id="pageContent">
+        <Header headerContent={contentDatabase.header} />
         <Row1 data={contentDatabase} />
         <Row2 data={contentDatabase} />
         <Row3 data={contentDatabase} />
         <Row4 data={contentDatabase} />
+        <Footer />
       </div>
     </div>
   );

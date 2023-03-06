@@ -16,6 +16,11 @@
   src: url("./cmunss.ttf");
 }
 
+@font-face {
+  font-family: latexSansBold;
+  src: url("./cmunsx.ttf");
+}
+
 .App {
   text-align: center;
   display: grid;
@@ -52,9 +57,9 @@ h2 {
   background-color: #171717;
 }
 
-#gameCarouselPic {
-  width: 100%;
-  height: 100%;
+#gameCarouselPic img {
+  z-index: 82;
+  width: 5%;
 }
 
 #skillsWrapper {
@@ -217,7 +222,7 @@ h2 {
   color: var(--myBlack);
   border-radius: 600px 600px 0 0;
   text-align: center;
-  font-size: 1.5rem;
+  font-size: 1rem;
   opacity: 0;
   transition: opacity 0.1s ease-in-out;
   z-index: 2;
@@ -231,10 +236,11 @@ h2 {
 a {
   color: var(--myMint);
   text-decoration: none;
+  font-family: latexSansBold;
 }
 
 a:hover {
-  color: var(--myOrange);
+  color: var(--myOrange) !important;
 }
 
 a:visited {
@@ -276,31 +282,122 @@ a:visited {
   border-color: var(--myGlaucous) !important;
 }
 
+#headerButtons {
+  grid-area: buttons;
+  padding: 1%;
+  display: flex;
+  justify-content: flex-end;
+}
+
 header {
   display: grid;
   height: fit-content;
-  background: radial-gradient(
-    circle at 0% 0%,
-    rgba(96, 143, 123, 1) 0%,
-    rgba(6, 131, 147, 1) 50%,
-    rgba(60, 0, 60, 1) 100%
-  );
+  background: black;
+  box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.5);
+  align-items: center;
   color: #fff;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr auto;
   grid-template-areas:
-    "title title title"
+    "title title buttons"
     "about about about";
   text-shadow: 4px 0px 10px lightskyblue;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   padding: 1%;
+  position: relative;
+  overflow: hidden;
+}
+
+header:before {
+  content: "my beebee is so gosh darn cute";
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    90deg,
+    var(--myMint),
+    var(--myOrange),
+    var(--myGlaucous),
+    var(--mySatBlue)
+  );
+  font-size: 10rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  text-shadow: none;
+  filter: blur(30px);
+  z-index: -1;
+  grid-area: header;
+  animation: slowMove 20s both infinite;
+}
+@keyframes slowMove {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(50%, 10%);
+    rotate: 30deg;
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+header:after {
+  content: "i love baby boy so much";
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    10deg,
+    var(--myMint),
+    var(--myOrange),
+    var(--myGlaucous),
+    var(--mySatBlue)
+  );
+  font-size: 10rem;
+  position: absolute;
+  top: 05;
+  left: 50;
+  right: 10;
+  bottom: 90;
+  pointer-events: none;
+  text-shadow: none;
+  filter: blur(40px);
+  z-index: -1;
+  animation: slowMoveBack 15s both infinite;
+}
+
+@keyframes slowMoveBack {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(-50%, -10%);
+    rotate: 10deg;
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+#resumeThumbnail {
+  width: 75px;
+  border-radius: 5px;
+  border: 1px solid var(--myGlaucous);
+}
+
+footer button {
+  background: none;
+  color: var(--myMint);
+  font-family: latexSansBold;
 }
 
 #headerTitle {
   grid-area: title;
   font-size: 2rem;
-  font-weight: 700;
   text-align: left;
   margin: 0;
   display: flex;
@@ -310,30 +407,57 @@ header {
   justify-content: space-between;
 }
 
-header button {
+button {
   outline: none;
   border: none;
-  background-color: lightseagreen;
-  color: #fff;
+  background-color: var(--myMint);
+  color: var(--myBlack);
   font-size: 1rem;
   font-weight: 300;
-  padding: 0.5rem;
-  border-radius: 10px;
+  padding: 1% 2% 1% 2%;
+  border-radius: 500px;
   cursor: pointer;
   margin-right: 3% !important;
+}
+
+button:hover {
+  background-color: var(--myOrange);
+  color: white;
+  transition: 0.2s ease-in-out;
 }
 
 #headerName {
   font-size: 2rem;
   font-weight: 700;
   margin: 0 0.5rem 0 0;
+  font-family: latexSansBold;
+}
+
+#mattInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 85%;
+  font-size: 1rem;
+}
+
+#mattInfo img {
+  height: 75px;
+  width: 75px;
+  object-fit: contain;
+  margin-right: 1%;
+  filter: drop-shadow(0px 0px 5px var(--myOrange));
+}
+
+#resumeThumbnail {
+  cursor: pointer;
 }
 
 #headerSub {
   font-size: 1rem;
   font-weight: 300;
   margin: 0;
-  font-style: italic;
 }
 
 #headerAbout {
@@ -341,33 +465,27 @@ header button {
   font-size: 1rem;
   text-align: left;
   display: grid;
-  grid-template-columns: 15% auto auto;
+  grid-template-columns: auto auto;
   grid-template-rows: 1fr;
   gap: 1%;
-  grid-template-areas: "pic game text";
-  align-items: last baseline;
-  margin-top: -3%;
+  grid-template-areas: "pic text";
+  align-items: center;
   justify-items: center;
   text-shadow: none;
-  font-weight: 300;
   pointer-events: none;
   height: fit-content;
+  margin-top: 1%;
 }
 
 #aboutText {
   grid-area: text;
-  justify-self: start;
-  text-align: justify;
-  line-height: 2rem;
-  font-size: 1.5rem;
-  width: 70%;
+  text-align: left;
+  font-size: 1rem;
 }
 
 #gameCarousel img {
-  max-height: 150px;
-  width: auto;
-  height: auto;
-  max-width: 100%;
+  height: 100px;
+  width: 100px;
   object-fit: contain;
   transition: opacity 0.5s ease-in-out;
   opacity: 1;
@@ -379,6 +497,7 @@ header button {
 
 #gameCarouselWrapper {
   height: 100%;
+  pointer-events: none;
 }
 
 #faveGamesHolder {
@@ -388,7 +507,6 @@ header button {
 }
 
 #headerButton {
-  grid-area: button;
   font-size: 1rem;
   text-align: center;
   margin: 0;
@@ -396,15 +514,12 @@ header button {
 
 #headerPic {
   grid-area: pic;
-  width: 60%;
-  height: 60%;
-  justify-self: end;
 }
 
 #headerPic img {
   object-fit: cover;
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
   border-radius: 10px;
   border: 1px solid #fff;
 }
@@ -456,10 +571,11 @@ html {
 }
 
 #gameCarouselTitle {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 700;
   text-align: center;
   margin: 0;
+  font-family: latexSansBold;
 }
 
 #lightBoxClose {
@@ -500,6 +616,7 @@ html {
   display: block;
   justify-content: flex-end;
   align-items: stretch;
+  z-index: 999;
 }
 
 #lightBoxPic img {
@@ -530,14 +647,68 @@ html {
 
 #pageContent {
   display: grid;
-  grid-template-rows: auto auto auto auto auto;
+  grid-template-rows: auto auto auto auto auto auto auto;
   grid-template-areas:
+    "header"
     "row1"
     "row2"
     "row2"
     "row3"
     "row3"
-    "row4";
+    "row4"
+    "footer";
+}
+
+#resumeBlock {
+  font-size: 1rem;
+  font-family: latexSansBold;
+  color: var(--myMint);
+  cursor: pointer;
+}
+
+#resumeBlock:hover {
+  color: var(--myOrange);
+  transition: 0.2s ease;
+}
+
+#footer {
+  grid-area: footer;
+  position: relative;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto;
+  grid-template-areas: "left center right";
+  justify-items: center;
+  align-items: start;
+  background-color: #000;
+  color: #fff;
+  font-size: 0.8rem;
+  overflow: hidden;
+  padding: 0.4%;
+}
+
+#footer:before {
+  content: "hire him or I'll be angy >:(";
+  position: absolute;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(
+    90deg,
+    var(--myMint),
+    var(--myOrange),
+    var(--myGlaucous),
+    var(--mySatBlue)
+  );
+  font-size: 11rem;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  pointer-events: none;
+  text-shadow: none;
+  filter: blur(30px);
+  margin-top: -9%;
+  z-index: 80;
 }
 
 @keyframes crystalline-background {
@@ -670,6 +841,8 @@ html {
   grid-template-rows: auto 1fr;
   align-items: stretch;
   text-align: right;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
+  z-index: 90;
   grid-template-areas:
     "skills title"
     "skills pics";
