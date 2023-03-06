@@ -51,14 +51,32 @@ const LightBox = ({
           </a>
         ))
         .reduce((prev, curr) => [prev, ", ", curr]);
+      const paragraphs = description.text
+        .split("<PB>")
+        .map((p, i) => (
+          <p
+            key={i}
+            dangerouslySetInnerHTML={{ __html: p.replace("<PE>", "") }}
+          />
+        ));
+
       return (
         <div id="lightBoxDescriptionText">
-          {description.text}
+          {paragraphs}
           <br /> {links}
         </div>
       );
     } else {
-      return <div id="lightBoxDescriptionText">{description}</div>;
+      const paragraphs = description
+        .split("<PB>")
+        .map((p, i) => (
+          <p
+            key={i}
+            dangerouslySetInnerHTML={{ __html: p.replace("<PE>", "") }}
+          />
+        ));
+
+      return <div id="lightBoxDescriptionText">{paragraphs}</div>;
     }
   }
 

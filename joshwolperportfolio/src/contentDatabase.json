@@ -238,22 +238,22 @@
     "quikDeform_cubeCompare": {
       "alt": "cube resolution comparison",
       "title": "Resolution Comparison",
-      "description": "<PB>Naturally, the resolution of the 3D volume representation is crucial to the possible elastic effects. Here, from left to right the cube uses the starting low res mesh, a tetgen mesh, and a Maya subdivision mesh. Fortunately, Maya already provides the best solution for this simple geometry!','With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.<PE>"
+      "description": "<PB>Naturally, the resolution of the 3D volume representation is crucial to the possible elastic effects. Here, from left to right the cube uses the starting low res mesh, a tetgen mesh, and a Maya subdivision mesh. Fortunately, Maya already provides the best solution for this simple geometry!<PE><PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.<PE>"
     },
     "quikDeform_flagCompare": {
       "alt": "flag stiffness comparison",
       "title": "Stiffness Comparison",
-      "description": "<PB>Here the effect of the material stiffness parameter is explored. From left to right the flags use Young’s modulus of 500, 1000, and 5000, giving progressively stiffer behavior. This gives a good idea of how artistically controllable the Projective Dynamics method is, as well as the rich control enabled by QuikDeform!','With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.<PE>"
+      "description": "<PB>Here the effect of the material stiffness parameter is explored. From left to right the flags use Young’s modulus of 500, 1000, and 5000, giving progressively stiffer behavior. This gives a good idea of how artistically controllable the Projective Dynamics method is, as well as the rich control enabled by QuikDeform!<PE><PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.<PE>"
     },
     "quikDeform_superman": {
       "alt": "superman",
       "title": "Superman",
-      "description": "<PB>Here we show off QuikDeform’s potential to easily add physics based animation to a turntable character. This example shows off the 2D strain and position constraints as well as coplanar elasticity.','With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.<PE>"
+      "description": "<PB>Here we show off QuikDeform’s potential to easily add physics based animation to a turntable character. This example shows off the 2D strain and position constraints as well as coplanar elasticity.<PE><PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.<PE>"
     },
     "quikDeform_wacky": {
       "alt": "wacky waving inflatable arm flailing tubeman",
       "title": "Wacky Waving",
-      "description": "<PB>Here a wacky waving inflatable arm flailing tubeman drums up attention outside the local Subway, showing off our 3D strain and position constraints. This 3D elastic animation is driven by an upwards wind vector placed by the artist.','With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.<PE>"
+      "description": "<PB>Here a wacky waving inflatable arm flailing tubeman drums up attention outside the local Subway, showing off our 3D strain and position constraints. This 3D elastic animation is driven by an upwards wind vector placed by the artist.<PE><PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.<PE>"
     }
   }
 }
