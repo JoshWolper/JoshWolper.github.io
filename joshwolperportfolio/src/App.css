@@ -843,7 +843,6 @@ html {
   align-items: stretch;
   text-align: right;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.75);
-  z-index: 90;
   grid-template-areas:
     "skills title"
     "skills pics";
