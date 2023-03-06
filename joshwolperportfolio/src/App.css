@@ -228,6 +228,19 @@ h2 {
   padding: 2% 0 2% 0%;
 }
 
+a {
+  color: var(--myMint);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--myOrange);
+}
+
+a:visited {
+  color: var(--myMint);
+}
+
 #row1 .imageBox::before {
   background-color: var(--mySatBlue) !important;
 }
@@ -409,10 +422,11 @@ html {
 #lightBoxTitle {
   font-weight: 700;
   font-size: 2rem;
+  font-family: latexSans;
 }
 
 #lightBoxDescriptionText {
-  font-size: 1.5rem;
+  font-size: 1rem;
   font-weight: 200 !important;
   text-align: left;
   line-height: 1.6rem;
@@ -429,6 +443,7 @@ html {
   background-color: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(75px);
   z-index: 1000;
+  gap: 3%;
   color: white;
   grid-template-columns: 5% 1fr 1fr 1fr 5%;
   grid-template-rows: 5% 1fr 1fr 1fr 5%;
@@ -478,15 +493,19 @@ html {
   grid-area: pic;
   justify-self: center;
   align-self: center;
-  width: fit-content;
-  height: 100%;
+  width: 100%;
+  height: fit-content;
   overflow: hidden;
+  border-radius: 10px;
+  display: block;
+  justify-content: flex-end;
+  align-items: stretch;
 }
 
 #lightBoxPic img {
-  border-radius: 10px;
   object-fit: contain;
-  overflow: hidden;
+  display: block;
+  width: 100%;
 }
 
 #lightBoxDescription {
@@ -495,7 +514,7 @@ html {
   align-self: center;
   font-size: 1.5rem;
   text-align: left;
-  width: 65%;
+  width: 90%;
 }
 
 #lightBox a {
@@ -505,7 +524,7 @@ html {
 }
 
 #lightBox a:hover {
-  color: var(--myBlack);
+  color: var(--myOrange);
   transition: 0.2s ease;
 }
 
