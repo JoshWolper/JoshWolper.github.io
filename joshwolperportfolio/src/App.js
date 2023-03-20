@@ -47,7 +47,9 @@ function App() {
   const [showRow2LightBox, setShowRow2LightBox] = useState(false);
   const [showRow3LightBox, setShowRow3LightBox] = useState(false);
   const [showRow4LightBox, setShowRow4LightBox] = useState(false);
+  const [loading, setLoading] = useState(true);
   const rowDescriptions = contentDatabase.rowDescriptions;
+  const loadingRef = useRef(null);
 
   useEffect(() => {
     setImages({
@@ -128,6 +130,15 @@ function App() {
       ));
 
     return <div>{paragraphs}</div>;
+  };
+
+  const Loading = () => {
+    return (
+      <div className="loading" ref={loadingRef}>
+        <div className="loadingSpinner"></div>
+        loading
+      </div>
+    );
   };
 
   const SkillsList = ({ skills }) => {
@@ -400,17 +411,30 @@ function App() {
     );
   };
 
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+      loadingRef.current.classList.add("loaded");
+    }, 10000);
+  }, []);
+
   return (
-    <div className="App">
-      <div id="pageContent">
-        <Header headerContent={contentDatabase.header} />
-        <Row1 data={contentDatabase} />
-        <Row2 data={contentDatabase} />
-        <Row3 data={contentDatabase} />
-        <Row4 data={contentDatabase} />
-        <Footer />
-      </div>
-    </div>
+    <>
+      {loading === false ? (
+        <div className="App">
+          <div id="pageContent">
+            <Header headerContent={contentDatabase.header} />
+            <Row1 data={contentDatabase} />
+            <Row2 data={contentDatabase} />
+            <Row3 data={contentDatabase} />
+            <Row4 data={contentDatabase} />
+            <Footer />
+          </div>
+        </div>
+      ) : (
+        <Loading />
+      )}
+    </>
   );
 }
 
