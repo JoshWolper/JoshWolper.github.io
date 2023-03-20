@@ -189,8 +189,9 @@ h2 {
   transition: opacity 1s ease-in-out;
 }
 
-.loading.loaded {
-  opacity: 0;
+.loaded {
+  opacity: 0 !important;
+  pointer-events: none;
 }
 
 .loadingSpinner {

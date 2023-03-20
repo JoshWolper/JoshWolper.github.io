@@ -413,8 +413,8 @@ function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false);
       loadingRef.current.classList.add("loaded");
+      setLoading(false);
     }, 10000);
   }, []);
 
