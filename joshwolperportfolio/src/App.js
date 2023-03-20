@@ -419,22 +419,17 @@ function App() {
   }, []);
 
   return (
-    <>
-      {loading === false ? (
-        <div className="App">
-          <div id="pageContent">
-            <Header headerContent={contentDatabase.header} />
-            <Row1 data={contentDatabase} />
-            <Row2 data={contentDatabase} />
-            <Row3 data={contentDatabase} />
-            <Row4 data={contentDatabase} />
-            <Footer />
-          </div>
-        </div>
-      ) : (
-        <Loading />
-      )}
-    </>
+    <div className="App">
+      <div id="pageContent">
+        {loading && <Loading />}
+        <Header headerContent={contentDatabase.header} />
+        <Row1 data={contentDatabase} />
+        <Row2 data={contentDatabase} />
+        <Row3 data={contentDatabase} />
+        <Row4 data={contentDatabase} />
+        <Footer />
+      </div>
+    </div>
   );
 }
 
