@@ -107,7 +107,7 @@
         }
       }
     },
-    "bloodClot": {
+    "BloodFlowWithClot": {
       "alt": "blood clot simulation",
       "title": "Medical Simulation",
       "description": "In my current postdoctoral research, I've joined a team of mechanics, computational biology experts, and doctors to simulate the complex multi-material effects that blood flow and arterial tissues have on blood clot fracture dynamics. My role as the MPM expert is to develop new computational methods for coupling all of these complex materials together while accurately modeling and visualizing physical attributes like velocity, damage, and chemical potential. Pictured here is a simulation of blood flow through a partially obstructed vessel with velocity visualized using a color ramp. We have one manuscript out for review, and another down the line, but nothing official to share just yet!"

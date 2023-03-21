@@ -8,36 +8,63 @@ import LightBox from "./LightBox";
 import Header from "./Header";
 import Footer from "./footer";
 //image imports
-import bloodClot from "./GIFs/BloodFlowWithClot.gif";
-import breadHIGH from "./GIFs/breadHIGH.gif";
-import Glacier2HIGH from "./GIFs/Glacier2HIGH.gif";
-import orangeHIGH from "./GIFs/orangeHIGH.gif";
-import quikDeform_cubeCompare from "./GIFs/quikDeform_cubeCompare.gif";
-import quikDeform_cubeRoom from "./GIFs/quikDeform_cubeRoom.gif";
-import quikDeform_flag from "./GIFs/quikDeform_flag.gif";
-import quikDeform_superman from "./GIFs/quikDeform_superman.gif";
-import quikDeform_wacky from "./GIFs/quikDeform_wacky.gif";
-import quikDeform_flagCompare from "./GIFs/quikDeform_flagCompare.gif";
-import RiteGameplay1 from "./GIFs/RiteGameplay1.gif";
-import RiteGameplay2 from "./GIFs/RiteGameplay2.gif";
-import RiteGameplay3 from "./GIFs/RiteGameplay3.gif";
-import RiteGameplay4 from "./GIFs/RiteGameplay4.gif";
-import PBDUnity_collision from "./GIFs/PBDUnity_collision.gif";
-import PBDUnity_interactionMethods from "./GIFs/PBDUnity_interactionMethods.gif";
-import PBDUnity_params from "./GIFs/PBDUnity_params.gif";
-import CleanPoissonDirt from "./GIFs/CleanPoissonDirt.gif";
-import CleanThroughDirtWall from "./GIFs/CleanThroughDirtWall.gif";
-import CleanVase from "./GIFs/CleanVase.gif";
-import CuttingWeeds from "./GIFs/CuttingWeeds.gif";
-import DirtifyVase from "./GIFs/DirtifyVase.gif";
-import PoissonWeeds from "./GIFs/PoissonWeeds.gif";
-import RailAuthoringTool from "./GIFs/RailAuthoringTool.gif";
-import RailGrinding from "./GIFs/RailGrinding.gif";
-import RailGrindingFAST from "./GIFs/RailGrindingFAST.gif";
-import WhiteboardDrawing from "./GIFs/WhiteboardDrawing.gif";
+import BloodFlowWithClotGIF from "./GIFs/BloodFlowWithClot.gif";
+import breadHIGHGIF from "./GIFs/breadHIGH.gif";
+import Glacier2HIGHGIF from "./GIFs/Glacier2HIGH.gif";
+import orangeHIGHGIF from "./GIFs/orangeHIGH.gif";
+import quikDeform_cubeCompareGIF from "./GIFs/quikDeform_cubeCompare.gif";
+import quikDeform_cubeRoomGIF from "./GIFs/quikDeform_cubeRoom.gif";
+import quikDeform_flagGIF from "./GIFs/quikDeform_flag.gif";
+import quikDeform_supermanGIF from "./GIFs/quikDeform_superman.gif";
+import quikDeform_wackyGIF from "./GIFs/quikDeform_wacky.gif";
+import quikDeform_flagCompareGIF from "./GIFs/quikDeform_flagCompare.gif";
+import RiteGameplay1GIF from "./GIFs/RiteGameplay1.gif";
+import RiteGameplay2GIF from "./GIFs/RiteGameplay2.gif";
+import RiteGameplay3GIF from "./GIFs/RiteGameplay3.gif";
+import RiteGameplay4GIF from "./GIFs/RiteGameplay4.gif";
+import PBDUnity_collisionGIF from "./GIFs/PBDUnity_collision.gif";
+import PBDUnity_interactionMethodsGIF from "./GIFs/PBDUnity_interactionMethods.gif";
+import PBDUnity_paramsGIF from "./GIFs/PBDUnity_params.gif";
+import CleanPoissonDirtGIF from "./GIFs/CleanPoissonDirt.gif";
+import CleanThroughDirtWallGIF from "./GIFs/CleanThroughDirtWall.gif";
+import CleanVaseGIF from "./GIFs/CleanVase.gif";
+import CuttingWeedsGIF from "./GIFs/CuttingWeeds.gif";
+import DirtifyVaseGIF from "./GIFs/DirtifyVase.gif";
+import PoissonWeedsGIF from "./GIFs/PoissonWeeds.gif";
+import RailAuthoringToolGIF from "./GIFs/RailAuthoringTool.gif";
+import RailGrindingGIF from "./GIFs/RailGrinding.gif";
+import RailGrindingFASTGIF from "./GIFs/RailGrindingFAST.gif";
+import WhiteboardDrawingGIF from "./GIFs/WhiteboardDrawing.gif";
+import BloodFlowWithClot from "./Stills/BloodFlowWithClot.png";
+import breadHIGH from "./Stills/breadHIGH.png";
+import Glacier2HIGH from "./Stills/Glacier2HIGH.png";
+import orangeHIGH from "./Stills/orangeHIGH.png";
+import quikDeform_cubeCompare from "./Stills/quikDeform_cubeCompare.png";
+import quikDeform_cubeRoom from "./Stills/quikDeform_cubeRoom.png";
+import quikDeform_flag from "./Stills/quikDeform_flag.png";
+import quikDeform_superman from "./Stills/quikDeform_superman.png";
+import quikDeform_wacky from "./Stills/quikDeform_wacky.png";
+import quikDeform_flagCompare from "./Stills/quikDeform_flagCompare.png";
+import RiteGameplay1 from "./Stills/RiteGameplay1.png";
+import RiteGameplay2 from "./Stills/RiteGameplay2.png";
+import RiteGameplay3 from "./Stills/RiteGameplay3.png";
+import RiteGameplay4 from "./Stills/RiteGameplay4.png";
+import PBDUnity_collision from "./Stills/PBDUnity_collision.png";
+import PBDUnity_interactionMethods from "./Stills/PBDUnity_interactionMethods.png";
+import PBDUnity_params from "./Stills/PBDUnity_params.png";
+import CleanPoissonDirt from "./Stills/CleanPoissonDirt.png";
+import CleanThroughDirtWall from "./Stills/CleanThroughDirtWall.png";
+import CleanVase from "./Stills/CleanVase.png";
+import CuttingWeeds from "./Stills/CuttingWeeds.png";
+import DirtifyVase from "./Stills/DirtifyVase.png";
+import PoissonWeeds from "./Stills/PoissonWeeds.png";
+import RailAuthoringTool from "./Stills/RailAuthoringTool.png";
+import RailGrindingFAST from "./Stills/RailGrindingFAST.png";
+import RailGrinding from "./Stills/RailGrinding.png";
+import WhiteboardDrawing from "./Stills/WhiteboardDrawing.png";
 
 //
-import { useAutoAnimate } from "@formkit/auto-animate/react";
+import autoAnimate from "@formkit/auto-animate/react";
 
 function App() {
   const [showLightBox, setShowLightBox] = useState(false);
@@ -50,10 +77,12 @@ function App() {
   const [loading, setLoading] = useState(true);
   const rowDescriptions = contentDatabase.rowDescriptions;
   const loadingRef = useRef(null);
+  const [GIFs, setGIFs] = useState({});
+  const [hoveredImage, setHoveredImage] = useState(null);
 
   useEffect(() => {
     setImages({
-      bloodClot,
+      BloodFlowWithClot,
       breadHIGH,
       Glacier2HIGH,
       orangeHIGH,
@@ -83,6 +112,38 @@ function App() {
     });
   }, []);
 
+  useEffect(() => {
+    setGIFs({
+      BloodFlowWithClotGIF,
+      breadHIGHGIF,
+      Glacier2HIGHGIF,
+      orangeHIGHGIF,
+      quikDeform_cubeCompareGIF,
+      quikDeform_cubeRoomGIF,
+      quikDeform_flagGIF,
+      quikDeform_supermanGIF,
+      quikDeform_wackyGIF,
+      quikDeform_flagCompareGIF,
+      RiteGameplay1GIF,
+      RiteGameplay2GIF,
+      RiteGameplay3GIF,
+      RiteGameplay4GIF,
+      PBDUnity_collisionGIF,
+      PBDUnity_interactionMethodsGIF,
+      PBDUnity_paramsGIF,
+      CleanPoissonDirtGIF,
+      CleanThroughDirtWallGIF,
+      CleanVaseGIF,
+      CuttingWeedsGIF,
+      DirtifyVaseGIF,
+      PoissonWeedsGIF,
+      RailAuthoringToolGIF,
+      RailGrindingGIF,
+      RailGrindingFASTGIF,
+      WhiteboardDrawingGIF,
+    });
+  }, []);
+
   const hideLightBox = () => {
     setShowLightBox(false);
   };
@@ -97,6 +158,10 @@ function App() {
     setCurrentImage(key);
     setShowLightBox(true);
   };
+
+  useEffect(() => {
+    console.log("currentImage", currentImage);
+  });
 
   const Description = ({ description }) => {
     function formatDescription(description) {
@@ -182,10 +247,9 @@ function App() {
       }
       return acc;
     }, {});
-    let [animationParent] = useAutoAnimate();
 
     return (
-      <div id="row1" ref={animationParent}>
+      <div id="row1">
         <div className="mainDescriptionBox">
           <h2>{rowDescriptions.row1.title}</h2>
           <Description description={rowDescriptions.row1.description} />
@@ -207,7 +271,12 @@ function App() {
               className="imageBox"
               data-title={data.row1[key].title}
             >
-              <img alt={data.row1[key].alt} src={images[key]} />
+              <img
+                alt={data.row1[key].alt}
+                src={hoveredImage === key ? GIFs[key + "GIF"] : images[key]}
+                onMouseEnter={() => setHoveredImage(key)}
+                onMouseLeave={() => setHoveredImage(null)}
+              />
             </div>
           ))}
         </div>
@@ -260,7 +329,12 @@ function App() {
               className="imageBox"
               data-title={data.row2[key].title}
             >
-              <img alt={data.row2[key].alt} src={images[key]} />
+              <img
+                alt={data.row2[key].alt}
+                src={hoveredImage === key ? GIFs[key + "GIF"] : images[key]}
+                onMouseEnter={() => setHoveredImage(key)}
+                onMouseLeave={() => setHoveredImage(null)}
+              />
             </div>
           ))}
         </div>
@@ -316,7 +390,12 @@ function App() {
                   className="imageBox"
                   data-title={data.row3[key].title}
                 >
-                  <img alt={data.row3[key].alt} src={images[key]} />
+                  <img
+                    alt={data.row3[key].alt}
+                    src={hoveredImage === key ? GIFs[key + "GIF"] : images[key]}
+                    onMouseEnter={() => setHoveredImage(key)}
+                    onMouseLeave={() => setHoveredImage(null)}
+                  />
                 </div>
               ))}
           </div>
@@ -336,7 +415,12 @@ function App() {
                   className="imageBox"
                   data-title={data.row3[key].title}
                 >
-                  <img alt={data.row3[key].alt} src={images[key]} />
+                  <img
+                    alt={data.row3[key].alt}
+                    src={hoveredImage === key ? GIFs[key + "GIF"] : images[key]}
+                    onMouseEnter={() => setHoveredImage(key)}
+                    onMouseLeave={() => setHoveredImage(null)}
+                  />
                 </div>
               ))}
           </div>
@@ -367,6 +451,13 @@ function App() {
       return acc;
     }, {});
 
+    let row4GIFs = Object.keys(data.row4).reduce((acc, key) => {
+      if (GIFs[key]) {
+        acc[key] = GIFs[key];
+      }
+      return acc;
+    }, {});
+
     return (
       <div id="row4">
         <div className="mainDescriptionBox">
@@ -390,7 +481,12 @@ function App() {
               className="imageBox"
               data-title={data.row4[key].title}
             >
-              <img alt={data.row4[key].alt} src={images[key]} />
+              <img
+                alt={data.row4[key].alt}
+                src={hoveredImage === key ? GIFs[key + "GIF"] : images[key]}
+                onMouseOver={() => setHoveredImage(key)}
+                onMouseOut={() => setHoveredImage(null)}
+              />
             </div>
           ))}
         </div>
@@ -415,7 +511,7 @@ function App() {
     setTimeout(() => {
       loadingRef.current.classList.add("loaded");
       setLoading(false);
-    }, 10000);
+    }, 1000);
   }, []);
 
   return (

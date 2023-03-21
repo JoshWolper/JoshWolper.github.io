@@ -1,4 +1,31 @@
-import { useEffect, useRef } from "react";
+import { useState, useEffect, useRef } from "react";
+import BloodFlowWithClot from "./GIFs/BloodFlowWithClot.gif";
+import breadHIGH from "./GIFs/breadHIGH.gif";
+import Glacier2HIGH from "./GIFs/Glacier2HIGH.gif";
+import orangeHIGH from "./GIFs/orangeHIGH.gif";
+import quikDeform_cubeCompare from "./GIFs/quikDeform_cubeCompare.gif";
+import quikDeform_cubeRoom from "./GIFs/quikDeform_cubeRoom.gif";
+import quikDeform_flag from "./GIFs/quikDeform_flag.gif";
+import quikDeform_superman from "./GIFs/quikDeform_superman.gif";
+import quikDeform_wacky from "./GIFs/quikDeform_wacky.gif";
+import quikDeform_flagCompare from "./GIFs/quikDeform_flagCompare.gif";
+import RiteGameplay1 from "./GIFs/RiteGameplay1.gif";
+import RiteGameplay2 from "./GIFs/RiteGameplay2.gif";
+import RiteGameplay3 from "./GIFs/RiteGameplay3.gif";
+import RiteGameplay4 from "./GIFs/RiteGameplay4.gif";
+import PBDUnity_collision from "./GIFs/PBDUnity_collision.gif";
+import PBDUnity_interactionMethods from "./GIFs/PBDUnity_interactionMethods.gif";
+import PBDUnity_params from "./GIFs/PBDUnity_params.gif";
+import CleanPoissonDirt from "./GIFs/CleanPoissonDirt.gif";
+import CleanThroughDirtWall from "./GIFs/CleanThroughDirtWall.gif";
+import CleanVase from "./GIFs/CleanVase.gif";
+import CuttingWeeds from "./GIFs/CuttingWeeds.gif";
+import DirtifyVase from "./GIFs/DirtifyVase.gif";
+import PoissonWeeds from "./GIFs/PoissonWeeds.gif";
+import RailAuthoringTool from "./GIFs/RailAuthoringTool.gif";
+import RailGrinding from "./GIFs/RailGrinding.gif";
+import RailGrindingFAST from "./GIFs/RailGrindingFAST.gif";
+import WhiteboardDrawing from "./GIFs/WhiteboardDrawing.gif";
 
 const LightBox = ({
   currentImage,
@@ -18,6 +45,36 @@ const LightBox = ({
     setCurrentImage(keys[prevIndex]);
   };
 
+  const GIFs = {
+    BloodFlowWithClot,
+    breadHIGH,
+    Glacier2HIGH,
+    orangeHIGH,
+    quikDeform_cubeCompare,
+    quikDeform_cubeRoom,
+    quikDeform_flag,
+    quikDeform_superman,
+    quikDeform_wacky,
+    quikDeform_flagCompare,
+    RiteGameplay1,
+    RiteGameplay2,
+    RiteGameplay3,
+    RiteGameplay4,
+    PBDUnity_collision,
+    PBDUnity_interactionMethods,
+    PBDUnity_params,
+    CleanPoissonDirt,
+    CleanThroughDirtWall,
+    CleanVase,
+    CuttingWeeds,
+    DirtifyVase,
+    PoissonWeeds,
+    RailAuthoringTool,
+    RailGrinding,
+    RailGrindingFAST,
+    WhiteboardDrawing,
+  };
+
   const handleNextClick = () => {
     const keys = Object.keys(images);
     const currentIndex = keys.indexOf(currentImage);
@@ -25,7 +82,7 @@ const LightBox = ({
     setCurrentImage(keys[nextIndex]);
   };
 
-  const imgSrc = images[currentImage];
+  const imgSrc = GIFs[currentImage];
 
   useEffect(() => {
     if (currentImage) {
