@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.bb071caf.css",
+    "main.css": "/static/css/main.b4cacb2e.css",
     "main.js": "/static/js/main.1014b545.js",
     "static/js/787.06fbcaa1.chunk.js": "/static/js/787.06fbcaa1.chunk.js",
     "static/media/RiteGameplay2.gif": "/static/media/RiteGameplay2.9b60aa7f49aac9188fd1.gif",
@@ -73,12 +73,12 @@
     "static/media/limboSquare.png": "/static/media/limboSquare.e20c3c6ee42c685da566.png",
     "static/media/mattLogo.png": "/static/media/mattLogo.c08951f621454d9c159f.png",
     "index.html": "/index.html",
-    "main.bb071caf.css.map": "/static/css/main.bb071caf.css.map",
+    "main.b4cacb2e.css.map": "/static/css/main.b4cacb2e.css.map",
     "main.1014b545.js.map": "/static/js/main.1014b545.js.map",
     "787.06fbcaa1.chunk.js.map": "/static/js/787.06fbcaa1.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bb071caf.css",
+    "static/css/main.b4cacb2e.css",
     "static/js/main.1014b545.js"
   ]
 }
