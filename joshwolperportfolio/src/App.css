@@ -28,6 +28,7 @@
   height: 100%;
   color: white;
   overflow-x: hidden;
+  overflow-y: scroll;
   font-family: latexSans !important;
 }
 
@@ -446,6 +447,7 @@ a:visited {
     padding: 5% !important;
     align-self: start !important;
     justify-self: start !important;
+    overflow-y: scroll;
   }
   p {
     margin-inline-end: 0px;
