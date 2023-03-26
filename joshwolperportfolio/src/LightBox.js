@@ -161,13 +161,12 @@ const LightBox = ({
           <div id="lightBoxNext" onClick={handleNextClick}>
             ▶
           </div>
+          <div id="lightBoxTitle">{title}</div>
+
           <div id="lightBoxPic">
             <img src={imgSrc} alt={alt} />
           </div>
-          <div id="lightBoxDescription">
-            <div id="lightBoxTitle">{title}</div>
-            <div id="lightBoxContent">{lightBoxDescription()}</div>
-          </div>
+          <div id="lightBoxDescription">{lightBoxDescription()}</div>
         </div>
       )}
     </div>

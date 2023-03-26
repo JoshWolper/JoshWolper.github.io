@@ -334,6 +334,165 @@ a:visited {
   justify-content: flex-end;
 }
 
+@media (max-width: 600px) {
+  footer {
+    font-size: 0.7rem !important;
+  }
+  footer a {
+    font-size: 0.7rem !important;
+  }
+  #headerAbout {
+    display: block !important;
+    margin-top: 5% !important;
+  }
+  #mattInfo {
+    padding: 0 !important;
+  }
+  #gameCarouselTitle {
+    font-size: 0.7rem !important;
+  }
+  #headerPic {
+    display: inline !important;
+    float: left !important;
+    padding-right: 2%;
+  }
+
+  #headerPic img {
+    margin: 0 !important;
+    height: auto !important;
+  }
+  #aboutText {
+    display: inline !important;
+    text-align: justify !important;
+  }
+  #headerButtons {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0;
+    gap: 20%;
+    align-content: center;
+    align-items: center;
+  }
+  #headerButton {
+    padding: 0 5% 0 5% !important;
+    margin: 4% !important;
+  }
+  .mainDescriptionBox {
+    display: flex;
+    flex-direction: column;
+    padding-top: 5% !important;
+    text-align: justify !important;
+  }
+  .mainDescriptionBox h2 {
+    margin: 0;
+    padding: 0;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+    margin-inline-end: 0em;
+    margin-inline-start: 0em;
+  }
+  .mainDescriptionBox > div {
+    padding: 0;
+    margin: 0;
+    border-left: none;
+    padding: 2%;
+  }
+  #skillsContainer li {
+    border: none !important;
+    font-size: 0.7rem;
+  }
+
+  ul {
+    margin-block-start: 0px;
+    margin-block-end: 0px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 0px;
+  }
+
+  #row1,
+  #row2,
+  #row3,
+  #row4 {
+    grid-template-columns: 30% 1fr !important;
+    grid-template-rows: 1fr !important;
+    grid-template-areas:
+      "title title"
+      "skills pics" !important;
+  }
+
+  h2 {
+    font-size: 1.5rem !important;
+  }
+
+  #row1Pics {
+    grid-template-columns: 1fr !important;
+  }
+  #row1Pics:before {
+    box-shadow: inset 0px 0px 100px var(--mySatBlue) !important;
+  }
+
+  #lightBox {
+    grid-template-columns: 5% 1fr 5% !important;
+    grid-template-rows: 5% min-content min-content min-content !important;
+    grid-template-areas:
+      "close close close"
+      "pic pic pic"
+      "pic pic pic"
+      "prev lbTitle next"
+      "description description description"
+      "bottom bottom bottom" !important;
+    width: auto !important;
+    padding: 5% !important;
+    align-self: start !important;
+    justify-self: start !important;
+  }
+  p {
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+  }
+
+  #lightBoxWrapper {
+    padding: 40% !important;
+  }
+
+  #lightBoxTitle {
+    grid-area: lbTitle !important;
+    text-align: center !important;
+    justify-self: center !important;
+  }
+
+  #lightBoxDescriptionText {
+    text-align: justify !important;
+    justify-self: first baseline !important;
+    align-self: start !important;
+    font-size: 0.9rem !important;
+  }
+
+  #lightBoxDescription {
+    width: 100% !important;
+    height: 100% !important;
+  }
+  #lightBoxPrev,
+  #lightBoxNext {
+    padding: 0 !important;
+  }
+  #picsHolder {
+    grid-template-columns: 1fr !important;
+  }
+
+  #row3Row1,
+  #row3Row2 {
+    grid-template-columns: 1fr !important;
+  }
+
+  #row4Pics {
+    grid-template-columns: 1fr !important;
+  }
+}
+
 header {
   display: grid;
   height: fit-content;
@@ -584,6 +743,10 @@ html {
   font-weight: 700;
   font-size: 2rem;
   font-family: latexSans;
+  grid-area: lbTitle;
+  text-align: left;
+  justify-self: start;
+  align-self: end;
 }
 
 #lightBoxDescriptionText {
@@ -606,11 +769,11 @@ html {
   z-index: 1000;
   gap: 3%;
   color: white;
-  grid-template-columns: 5% 1fr 1fr 1fr 5%;
+  grid-template-columns: 5% min-content 1fr 1fr 5%;
   grid-template-rows: 5% 1fr 1fr 1fr 5%;
   grid-template-areas:
     "close close close close close"
-    "prev pic pic description next"
+    "prev pic pic lbTitle next"
     "prev pic pic description next"
     "prev pic pic description next"
     "bottom bottom bottom bottom bottom";
@@ -674,7 +837,7 @@ html {
 #lightBoxDescription {
   grid-area: description;
   justify-self: start;
-  align-self: center;
+  align-self: start;
   font-size: 1.5rem;
   text-align: left;
   width: 90%;

@@ -87,7 +87,7 @@
       "description": {
         "text": "AnisoMPM presents a cutting-edge approach for animating anisotropic fracture. Our system captures all modes of anisotropic materials, and improves significantly on the performance of CD-MPM through an explicit approach to the damage solve. I presented this work at SIGGRAPH 2020 and subsequently released the open-source code. Pictured here, we simulate tearing an orange slice to reveal its juicy radial anisotropy. Here are some links to learn more!",
         "links": {
-          "SIGHGRAPH 2020 Virtual Presentation": "https://www.youtube.com/watch?v=tiQ5MKp_PV8&t=490s",
+          "SIGGRAPH 2020 Virtual Presentation": "https://www.youtube.com/watch?v=tiQ5MKp_PV8&t=490s",
           "Website": "https://joshuahwolper.com/anisompm",
           "Video Overview": "https://www.youtube.com/watch?v=eXJi7pkUZn0",
           "Paper PDF": "https://href.li/?https://dl.acm.org/doi/pdf/10.1145/3386569.3392428",

@@ -85,7 +85,7 @@ const Footer = () => {
         rel="noreferrer"
         id="mattInfo"
       >
-        <div>website built by matt alexander</div>
+        <div>website built by:</div>
         <img src={mattLogo} />
       </a>
     </footer>
