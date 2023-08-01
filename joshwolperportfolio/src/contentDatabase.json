@@ -6,12 +6,12 @@
   },
   "rowDescriptions": {
     "row1": {
-      "title": "Large Scale Programming and Visualization",
+      "title": "Physics Programming and Visualization",
       "description": {
         "links": {
           "Google Scholar Page": "https://scholar.google.com/citations?user=_7nOfdEAAAAJ&hl=en"
         },
-        "text": "Throughout my PhD and postdoctoral research I developed myriad skills in computer science and engineering. Working in large interdisciplinary teams, I developed and published computational techniques and codebases for animating material fracture. Cited over 100 times, my work spans simulation for computer graphics and real-world engineering alike! Google Scholar Page"
+        "text": "Throughout my PhD and postdoc I developed myriad skills in computer science and engineering. Working in large interdisciplinary teams, I developed, published, and open-sourced computational techniques for animating material fracture. Published in both SIGGRAPH and Nature, and, cited over 100 times, my work spans simulation for computer graphics and engineering alike! Google Scholar Page"
       },
       "skills": {
         "c++": "C++ for 3D Math & Linear Algebra",
