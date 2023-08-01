@@ -27,23 +27,26 @@
             "ziran2020": "https://github.com/penn-graphics-research/ziran2020"
           }
         },
-        "houdini": "Houdini"
+        "houdini": "Houdini Visualization"
       }
     },
     "row2": {
-      "title": "Unreal Engine 5 Project",
-      "description": "In my free-time, I’m working on GraveTender, a cozy survival horror game about cleaning a graveyard and growing flowers. I’m designing and implementing all the gameplay systems and authoring tools for asset creation.",
+      "title": "Unreal Engine 5 Prototypes",
+      "description": "<PB>In my free-time, I’m solo-developing two games:<PE><PB>Color Town is a thoughtfully unfair game about life under Color. Stay in your lane, or fast-track your way to becoming purple.<PE><PB>GraveTender is a cozy survival horror game about cleaning a graveyard and growing flowers. Explore past sunset at your own risk.<PE>",
       "skills": {
         "unreal": "Unreal Engine 5",
         "blueprint": "Blueprint",
-        "gameplay": "Gameplay Design and Programming",
+        "materials": "Materials and Shaders",
+        "tools": "Procedural Content Generation",
+        "gamedesign": "Game Design",
+        "gameplayprog": "Gameplay Programming", 
         "authoring": "Authoring Tool Design"
       }
     },
     "row3": {
       "title": "Unity Projects",
       "description": {
-        "text": "<PB>Two Unity Engine based projects from my undergrad days:<PE><PB>RITE: Funded by the Swarthmore College Halpern Engineering Design Fund, I spent a summer teaching myself Unity and making a prototype of a 2D puzzle platformer about a boy entering the spirit world. The art was done by my incredibly talented partner, Matt Alexander!<PE><PB>Then, for my senior thesis at Swarthmore College, I built an interactive soft-body physics sandbox in Unity by implementing Position Based Dynamics. All demos shown have no Unity physics, just my PBD.<PE>",
+        "text": "<PB>Unity Engine projects from my undergrad days:<PE><PB>RITE: A prototype of a 2D puzzle platformer about a boy entering another world. The art was done by my incredibly talented partner, Matt Alexander! (Funded by Halpern Engineering Design Fund, Swarthmore College)<PE><PB>Position Based Dynamics Sandbox: An interactive soft-body physics sandbox made by implementing Position Based Dynamics in Unity. (Engineering Senior Thesis, Swarthmore College)<PE>",
         "links": {
           "Position Based Dynamics": "https://www.cs.toronto.edu/~jacobson/seminar/mueller-et-al-2007.pdf"
         }
@@ -51,17 +54,20 @@
       "skills": {
         "unity": "Unity Engine",
         "c#": "C#",
-        "rigging": "Rigging and Animation with Inverse Kinematics",
+        "character": "Character Controller Design"
+        "rigging": "Rigging and Animated with Inverse Kinematics",
         "gameplay": "Gameplay Design and Programming",
         "physics": "Real-time Physics Simulation"
       }
     },
     "row4": {
-      "title": "Maya Authoring Tool for Physics Animation",
-      "description": "QuikDeform: In my graduate coursework at UPenn (CIS660 Advanced Topics in CG) I had the opportunity to implement a SIGGRAPH paper and turn it into an authoring tool in Maya. We designed QuikDeform, a Projective Dynamics plug-in that enables an artist to quickly design and control soft-body physics animations. My contribution was the C++ physics solver and design of the tool.",
+      "title": "Projective Dynamics Maya Plug-In",
+      "description": "QuikDeform: A Projective Dynamics plug-in that enables artists to quickly design and control soft-body physics animations. (Graduate Coursework, Advanced Topics in CG)",
       "skills": {
-        "c++": "C++ (DOP with Eigen Linear Algebra)",
-        "authoring": "Authoring tool design",
+        "c++": "C++ and Eigen Linear Algebra",
+        "dop": "Data Oriented Programming",
+        "oop": "Object Oriented Programming",
+        "authoring": "Authoring Tool Design",
         "physics": "Real-time Physics Simulation"
       }
     }
