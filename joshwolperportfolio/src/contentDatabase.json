@@ -114,6 +114,31 @@
     }
   },
   "row2": {
+    "NewGif1": {
+      "alt": "",
+      "title": "",
+      "description": ""
+    },
+    "NewGif2": {
+      "alt": "",
+      "title": "",
+      "description": ""
+    },
+    "NewGif3": {
+      "alt": "",
+      "title": "",
+      "description": ""
+    },
+    "NewGif4": {
+      "alt": "",
+      "title": "",
+      "description": ""
+    },
+    "NewGif5": {
+      "alt": "",
+      "title": "",
+      "description": ""
+    },
     "RailAuthoringTool": {
       "alt": "rail authoring tool in unreal engine",
       "title": "Spline Mesh Rail Authoring Tool",

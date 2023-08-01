@@ -48,6 +48,10 @@ h2 {
   height: 100%;
 }
 
+/* #row1, #row2, #row3, #row4 {
+  padding-right: 2%;
+} */
+
 #row1,
 #row3 {
   background-color: var(--myBlack);
@@ -115,7 +119,7 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  box-shadow: inset 0px 0px 150px var(--mySatBlue);
+  /* box-shadow: inset 0px 0px 150px var(--mySatBlue); */
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
@@ -129,7 +133,7 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  box-shadow: inset 0px 0px 150px var(--myOrange);
+  /* box-shadow: inset 0px 0px 150px var(--myOrange); */
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
@@ -143,7 +147,7 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  box-shadow: inset 0px 0px 100px var(--myGlaucous);
+  /* box-shadow: inset 0px 0px 100px var(--myGlaucous); */
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
@@ -157,7 +161,7 @@ h2 {
   left: 0;
   right: 0;
   bottom: 0;
-  box-shadow: inset 0px 0px 150px var(--myMint);
+  /* box-shadow: inset 0px 0px 150px var(--myMint); */
   opacity: 1;
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
@@ -331,6 +335,7 @@ a:visited {
 #headerButtons {
   grid-area: buttons;
   padding: 1%;
+  width: fit-content;
   display: flex;
   justify-content: flex-end;
 }
@@ -429,9 +434,9 @@ a:visited {
   #row1Pics {
     grid-template-columns: 1fr !important;
   }
-  #row1Pics:before {
+  /* #row1Pics:before {
     box-shadow: inset 0px 0px 100px var(--mySatBlue) !important;
-  }
+  } */
 
   #lightBox {
     grid-template-columns: 5% 1fr 5% !important;
@@ -496,26 +501,38 @@ a:visited {
 }
 
 header {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  min-height: 100px;
   height: fit-content;
   background: black;
   box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.5);
   align-items: center;
   color: #fff;
-  grid-template-columns: 1fr 1fr 1fr;
+  /* grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr auto;
   grid-template-areas:
     "title title buttons"
-    "about about about";
+    "about about about"; */
   text-shadow: 4px 0px 10px lightskyblue;
   box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.2);
   z-index: 800;
   padding: 2% 3% 2% 3%;
   position: relative;
   overflow: hidden;
+  background-image: url('./card3.jpg');
+  background-size: 70%;
+  background-repeat: no-repeat;
 }
 
-header:before {
+#headerLogo {
+  width: 100%;
+}
+
+/* header:before {
   content: "my beebee is so gosh darn cute";
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -538,7 +555,7 @@ header:before {
   z-index: -1;
   grid-area: header;
   animation: slowMove 20s both infinite;
-}
+} */
 @keyframes slowMove {
   0% {
     transform: translate(0, 0);
@@ -552,7 +569,7 @@ header:before {
   }
 }
 
-header:after {
+/* header:after {
   content: "i love baby boy so much";
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
@@ -574,7 +591,7 @@ header:after {
   filter: blur(40px);
   z-index: -1;
   animation: slowMoveBack 15s both infinite;
-}
+} */
 
 @keyframes slowMoveBack {
   0% {
@@ -601,6 +618,14 @@ footer button {
   font-family: latexSansBold;
 }
 
+#headerTop {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 #headerTitle {
   grid-area: title;
   font-size: 2rem;
@@ -611,13 +636,18 @@ footer button {
   align-content: center;
   align-items: baseline;
   justify-content: space-between;
+  /* padding-left: 25%; */
 }
 
 button {
   outline: none;
   border: none;
-  background-color: var(--myGlaucous);
-  color: white;
+  background: linear-gradient(to bottom right, var(--mySatBlue), var(--myGlaucous));
+  color: black;
+  border: 2px solid var(--myGlaucous);
+  box-sizing: border-box;
+  /* background-color: var(--myGlaucous); */
+  text-shadow: 1px 1px 0px rgba(0,0,0,0.4);
   font-family: latexSansBold;
   font-size: 1rem;
   font-weight: 300;
@@ -625,6 +655,7 @@ button {
   border-radius: 500px;
   cursor: pointer;
   margin-right: 3% !important;
+  width: 100px;
 }
 
 button:hover {
@@ -662,12 +693,18 @@ button:hover {
 }
 
 #headerSub {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 300;
+  text-align: right;
+  width: 60%;
   margin: 0;
+  /* padding-left: 70%; */
+  /* width: 100%; */
+  /* white-space: nowrap; */
 }
 
 #headerAbout {
+  padding-left: 25%;
   grid-area: about;
   font-size: 1rem;
   text-align: left;
@@ -675,7 +712,7 @@ button:hover {
   grid-template-columns: auto auto;
   grid-template-rows: 1fr;
   gap: 1%;
-  grid-template-areas: "pic text";
+  grid-template-areas: "text pic";
   align-items: center;
   justify-items: center;
   text-shadow: none;
@@ -686,8 +723,25 @@ button:hover {
 
 #aboutText {
   grid-area: text;
-  text-align: left;
+  text-align: right;
   font-size: 1rem;
+  position: relative;
+}
+
+#aboutText:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  filter: blur(5px);
+  background-color: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  border-radius: 30px;
 }
 
 #gameCarousel img {
@@ -882,6 +936,17 @@ html {
   transition: 0.2s ease;
 }
 
+#flower {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  height: 100%;
+  z-index: -1;
+  pointer-events: none;
+  user-select: none;
+}
+
 #footer {
   grid-area: footer;
   position: relative;
@@ -891,14 +956,14 @@ html {
   grid-template-areas: "left center right";
   justify-items: center;
   align-items: start;
-  background-color: #000;
+  background-color: #1a1a1a;
   color: #fff;
   font-size: 0.8rem;
   overflow: hidden;
   padding: 4% 0 4% 0;
 }
 
-#footer:before {
+/* #footer:before {
   content: "hire him or I'll be angy >:(";
   position: absolute;
   -webkit-text-fill-color: transparent;
@@ -920,7 +985,7 @@ html {
   filter: blur(30px);
   margin-top: -9%;
   z-index: 80;
-}
+} */
 
 @keyframes crystalline-background {
   0% {
@@ -960,6 +1025,9 @@ html {
 }
 
 #row1Pics {
+  border: 5px solid var(--mySatBlue);
+  box-sizing: border-box;
+  border-bottom: none !important;
   grid-area: pics;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -985,6 +1053,11 @@ html {
     "skills pics pics pics pics pics";
 }
 
+#row2 #picsHolder {
+  border: 5px solid var(--myOrange);
+  box-sizing: border-box;
+  border-bottom: none !important; 
+}
 #row3 {
   grid-area: row3;
   display: grid;
@@ -997,6 +1070,9 @@ html {
 }
 
 #row3Pics {
+  border: 5px solid var(--myGlaucous);
+  box-sizing: border-box;
+  border-bottom: none !important; 
   grid-area: pics;
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -1015,7 +1091,10 @@ html {
 
 #row4Pics {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  border: 5px solid var(--myGlaucous);
+  border-bottom: none !important;
   grid-template-rows: 1fr;
   border-radius: 30px 30px 0 0;
   margin-left: 1%;

@@ -63,8 +63,7 @@ import RailGrindingFAST from "./Stills/RailGrindingFAST.png";
 import RailGrinding from "./Stills/RailGrinding.png";
 import WhiteboardDrawing from "./Stills/WhiteboardDrawing.png";
 
-//
-import autoAnimate from "@formkit/auto-animate/react";
+// import autoAnimate from "@formkit/auto-animate/react";
 
 function App() {
   const [showLightBox, setShowLightBox] = useState(false);

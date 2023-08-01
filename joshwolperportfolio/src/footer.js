@@ -80,7 +80,7 @@ const Footer = () => {
         <img id="resumeThumbnail" src={resumeThumbnail} />
       </div>
       <a
-        href="https://www.mattalexander.gallery/"
+        href="https://mattbookair.github.io/portfolio"
         target="_blank"
         rel="noreferrer"
         id="mattInfo"
