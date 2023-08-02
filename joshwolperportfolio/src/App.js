@@ -158,13 +158,14 @@ function App() {
     setShowLightBox(true);
   };
 
-  useEffect(() => {
-    console.log("currentImage", currentImage);
-  });
+  // useEffect(() => {
+  //   console.log("currentImage", currentImage);
+  // });
 
   const Description = ({ description }) => {
     function formatDescription(description) {
-      if (typeof description === "object" && description.links) {
+      if (description.links) {
+        // console.log("there is a link")
         // if the description has a links object, replace strings matching the link keys with anchor tags
         let formattedText = description.text;
         Object.keys(description.links).forEach((key) => {
@@ -174,10 +175,13 @@ function App() {
             `<a href="${link}" target="_blank" rel="noreferrer">${key}</a>`
           );
         });
+        // console.log("presplit formattedText:", formattedText)
         return formattedText;
       } else {
         // if there is no links object, just return the value of the "description" key's value
-        return description;
+        let formattedText = description;
+        // console.log('formattedText:', formattedText)
+        return formattedText;
       }
     }
 
@@ -189,7 +193,7 @@ function App() {
       .map((p, i) => (
         <p
           key={i}
-          dangerouslySetInnerHTML={{ __html: p.replace("<PE>", "") }}
+          dangerouslySetInnerHTML={{ __html: p}}
         />
       ));
 
@@ -222,8 +226,8 @@ function App() {
                 </a>
               ))
               .reduce((prev, curr) => [prev, " | ", curr]);
-            console.log("links is");
-            console.table(links);
+            // console.log("links is");
+            // console.table(links);
             return (
               <li key={key} id="skillWLinks">
                 {value.description}
@@ -309,7 +313,7 @@ function App() {
       <div id="row2">
         <div className="mainDescriptionBox">
           <h2>{rowDescriptions.row2.title}</h2>
-          <div>{rowDescriptions.row2.description}</div>
+          <Description description={rowDescriptions.row2.description} />
         </div>
         <div id="skillsWrapper">
           <SkillsList skills={rowDescriptions.row2.skills} />

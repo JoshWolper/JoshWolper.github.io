@@ -11,7 +11,7 @@
         "links": {
           "Google Scholar Page": "https://scholar.google.com/citations?user=_7nOfdEAAAAJ&hl=en"
         },
-        "text": "Throughout my PhD and postdoc I developed myriad skills in computer science and engineering. Working in large interdisciplinary teams, I developed, published, and open-sourced computational techniques for animating material fracture. Published in both SIGGRAPH and Nature, and, cited over 100 times, my work spans simulation for computer graphics and engineering alike! Google Scholar Page"
+        "text": "Throughout my PhD and postdoc I developed myriad skills in computer science and engineering. Working in large interdisciplinary teams, I developed, published, and open-sourced computational techniques for animating material fracture. Published in both SIGGRAPH and Nature, and, cited over 100 times, my work spans simulation for computer graphics and engineering alike! <br><u>Google Scholar Page</u>"
       },
       "skills": {
         "c++": "C++ for 3D Math & Linear Algebra",
@@ -32,7 +32,7 @@
     },
     "row2": {
       "title": "Unreal Engine 5 Prototypes",
-      "description": "<PB>In my free-time, I’m solo-developing two games:<PE><PB>Color Town is a thoughtfully unfair game about life under Color. Stay in your lane, or fast-track your way to becoming purple.<PE><PB>GraveTender is a cozy survival horror game about cleaning a graveyard and growing flowers. Explore past sunset at your own risk.<PE>",
+      "description": "<PB>In my free-time, I’m solo-developing two games:<PB><span style=\"font-weight: 900 !important; color:rgb(255, 159, 26)\">Color Town</span> is a thoughtfully unfair game about life under Color. Stay in your lane, or fast-track your way to becoming purple.<PB><span style=\"font-weight: 900 !important; color:rgb(255, 159, 26)\">GraveTender</span> is a cozy survival horror game about cleaning a graveyard and growing flowers. Explore past sunset at your own risk.",
       "skills": {
         "unreal": "Unreal Engine 5",
         "blueprint": "Blueprint",
@@ -46,7 +46,7 @@
     "row3": {
       "title": "Unity Projects",
       "description": {
-        "text": "<PB>Unity Engine projects from my undergrad days:<PE><PB>RITE: A prototype of a 2D puzzle platformer about a boy entering another world. The art was done by my incredibly talented partner, Matt Alexander! (Funded by Halpern Engineering Design Fund, Swarthmore College)<PE><PB>Position Based Dynamics Sandbox: An interactive soft-body physics sandbox made by implementing Position Based Dynamics in Unity. (Engineering Senior Thesis, Swarthmore College)<PE>",
+        "text": "<PB>Unity Engine projects from my undergrad days:<PB><span style=\"font-weight: 900 !important; color:rgb(213, 255, 243)\">RITE:</span> A prototype of a 2D puzzle platformer about a boy entering another world. The art was done by my incredibly talented partner, Matt Alexander! (Funded by Halpern Engineering Design Fund, Swarthmore College)<PB><span style=\"font-weight: 900 !important; color:rgb(213, 255, 243)\">PBD Sandbox</span>: An interactive soft-body physics sandbox made by implementing <u>Position Based Dynamics</u> in Unity. (Engineering Senior Thesis, Swarthmore College)",
         "links": {
           "Position Based Dynamics": "https://www.cs.toronto.edu/~jacobson/seminar/mueller-et-al-2007.pdf"
         }
@@ -54,7 +54,7 @@
       "skills": {
         "unity": "Unity Engine",
         "c#": "C#",
-        "character": "Character Controller Design"
+        "character": "Character Controller Design",
         "rigging": "Rigging and Animated with Inverse Kinematics",
         "gameplay": "Gameplay Design and Programming",
         "physics": "Real-time Physics Simulation"
@@ -62,7 +62,7 @@
     },
     "row4": {
       "title": "Projective Dynamics Maya Plug-In",
-      "description": "QuikDeform: A Projective Dynamics plug-in that enables artists to quickly design and control soft-body physics animations. (Graduate Coursework, Advanced Topics in CG)",
+      "description": "<span style=\"color:rgb(180, 185, 239); font-weight: 900 !important\">QuikDeform</span>: A Projective Dynamics plug-in that enables artists to quickly design and control soft-body physics animations. (Graduate Coursework, Advanced Topics in CG)",
       "skills": {
         "c++": "C++ and Eigen Linear Algebra",
         "dop": "Data Oriented Programming",
@@ -264,32 +264,32 @@
     "quikDeform_cubeRoom": {
       "alt": "cube room demo",
       "title": "Cube Room Demo",
-      "description": "<PB>Here an artist is able to add a volumetric solid cube to a room of planar collision constraints. Then, an external force is added by the artist to the cube, and the physics based animation is then added to the Maya timeline!<PE><PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.<PE>"
+      "description": "<PB>Here an artist is able to add a volumetric solid cube to a room of planar collision constraints. Then, an external force is added by the artist to the cube, and the physics based animation is then added to the Maya timeline!<PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes."
     },
     "quikDeform_flag": {
       "alt": "flagpole demo",
       "title": "Flagpole Demo",
-      "description": "<PB>Here, our 2D strain constraint is shown off, allowing the animation of coplanar thin-shell elasticity like this waving flag! The artist adds our optional wind force vector as the external force to enable this animation. Note that this strictly uses 2D strain constraints, no bending for simplicity!<PE><PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.<PE>"
+      "description": "<PB>Here, our 2D strain constraint is shown off, allowing the animation of coplanar thin-shell elasticity like this waving flag! The artist adds our optional wind force vector as the external force to enable this animation. Note that this strictly uses 2D strain constraints, no bending for simplicity!<PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes."
     },
     "quikDeform_cubeCompare": {
       "alt": "cube resolution comparison",
       "title": "Resolution Comparison",
-      "description": "<PB>Naturally, the resolution of the 3D volume representation is crucial to the possible elastic effects. Here, from left to right the cube uses the starting low res mesh, a tetgen mesh, and a Maya subdivision mesh. Fortunately, Maya already provides the best solution for this simple geometry!<PE><PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.<PE>"
+      "description": "<PB>Naturally, the resolution of the 3D volume representation is crucial to the possible elastic effects. Here, from left to right the cube uses the starting low res mesh, a tetgen mesh, and a Maya subdivision mesh. Fortunately, Maya already provides the best solution for this simple geometry!<PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes."
     },
     "quikDeform_flagCompare": {
       "alt": "flag stiffness comparison",
       "title": "Stiffness Comparison",
-      "description": "<PB>Here the effect of the material stiffness parameter is explored. From left to right the flags use Young’s modulus of 500, 1000, and 5000, giving progressively stiffer behavior. This gives a good idea of how artistically controllable the Projective Dynamics method is, as well as the rich control enabled by QuikDeform!<PE><PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.<PE>"
+      "description": "<PB>Here the effect of the material stiffness parameter is explored. From left to right the flags use Young’s modulus of 500, 1000, and 5000, giving progressively stiffer behavior. This gives a good idea of how artistically controllable the Projective Dynamics method is, as well as the rich control enabled by QuikDeform!<PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes."
     },
     "quikDeform_superman": {
       "alt": "superman",
       "title": "Superman",
-      "description": "<PB>Here we show off QuikDeform’s potential to easily add physics based animation to a turntable character. This example shows off the 2D strain and position constraints as well as coplanar elasticity.<PE><PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.<PE>"
+      "description": "<PB>Here we show off QuikDeform’s potential to easily add physics based animation to a turntable character. This example shows off the 2D strain and position constraints as well as coplanar elasticity.<PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes."
     },
     "quikDeform_wacky": {
       "alt": "wacky waving inflatable arm flailing tubeman",
       "title": "Wacky Waving",
-      "description": "<PB>Here a wacky waving inflatable arm flailing tubeman drums up attention outside the local Subway, showing off our 3D strain and position constraints. This 3D elastic animation is driven by an upwards wind vector placed by the artist.<PE><PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes.<PE>"
+      "description": "<PB>Here a wacky waving inflatable arm flailing tubeman drums up attention outside the local Subway, showing off our 3D strain and position constraints. This 3D elastic animation is driven by an upwards wind vector placed by the artist.<PB>With QuikDeform, an artist can animate 2D or 3D elastica while controlling the constraints to add and their weights, solver parameters, and frictional collision planes."
     }
   }
 }
