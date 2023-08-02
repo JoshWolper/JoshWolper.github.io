@@ -7,7 +7,7 @@ import outerWildsCover from "./gameImages/squareVersions/outerWildsSquare.png";
 import subnauticaCover from "./gameImages/squareVersions/subnauticaSquare.png";
 import portalCover from "./gameImages/squareVersions/portalSquare.png";
 import limboCover from "./gameImages/squareVersions/limboSquare.png";
-import onePageResume from "./PDFs/OnePageResume.pdf";
+import onePageResume from "./PDFs/JoshWolperResume.pdf";
 import mattLogo from "./mattLogo.png";
 import resumeThumbnail from "./PDFs/resumeThumbnail.png";
 

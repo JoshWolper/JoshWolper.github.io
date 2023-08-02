@@ -26,6 +26,11 @@ import RailAuthoringTool from "./GIFs/RailAuthoringTool.gif";
 import RailGrinding from "./GIFs/RailGrinding.gif";
 import RailGrindingFAST from "./GIFs/RailGrindingFAST.gif";
 import WhiteboardDrawing from "./GIFs/WhiteboardDrawing.gif";
+import ColorTownPrototype_BecomePurple from "./GIFs/ColorTownPrototype_BecomePurple.gif";
+import ColorTownPrototype_DynamicColorSystem from "./GIFs/ColorTownPrototype_DynamicColorSystem.gif";
+import ColorTownPrototype_Logic from "./GIFs/ColorTownPrototype_Logic.gif";
+import ColorTownPrototype_Thief from "./GIFs/ColorTownPrototype_Thief.gif";
+import ColorTownPrototype_Typing from "./GIFs/ColorTownPrototype_Typing.gif";
 
 const LightBox = ({
   currentImage,
@@ -73,6 +78,11 @@ const LightBox = ({
     RailGrinding,
     RailGrindingFAST,
     WhiteboardDrawing,
+    ColorTownPrototype_BecomePurple,
+    ColorTownPrototype_DynamicColorSystem,
+    ColorTownPrototype_Logic,
+    ColorTownPrototype_Thief,
+    ColorTownPrototype_Typing
   };
 
   const handleNextClick = () => {
