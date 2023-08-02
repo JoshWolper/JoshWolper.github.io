@@ -524,13 +524,12 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-end;
   align-content: center;
   min-height: 100px;
   height: fit-content;
   background: black;
   box-shadow: inset 0px 0px 100px rgba(0, 0, 0, 0.5);
-  align-items: center;
   color: #fff;
   /* grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr auto;
@@ -641,7 +640,7 @@ footer button {
 #headerTop {
   display: flex;
   flex-direction: row;
-  width: 100%;
+  width: 80%;
   justify-content: flex-end;
   align-items: center;
 }

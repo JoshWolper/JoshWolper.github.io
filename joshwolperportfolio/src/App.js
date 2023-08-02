@@ -62,6 +62,17 @@ import RailAuthoringTool from "./Stills/RailAuthoringTool.png";
 import RailGrindingFAST from "./Stills/RailGrindingFAST.png";
 import RailGrinding from "./Stills/RailGrinding.png";
 import WhiteboardDrawing from "./Stills/WhiteboardDrawing.png";
+import ColorTownPrototype_BecomePurpleGIF from "./GIFs/ColorTownPrototype_BecomePurple.gif";
+import ColorTownPrototype_DynamicColorSystemGIF from "./GIFs/ColorTownPrototype_DynamicColorSystem.gif";
+import ColorTownPrototype_LogicGIF from "./GIFs/ColorTownPrototype_Logic.gif";
+import ColorTownPrototype_ThiefGIF from "./GIFs/ColorTownPrototype_Thief.gif";
+import ColorTownPrototype_TypingGIF from "./GIFs/ColorTownPrototype_Typing.gif";
+import ColorTownPrototype_BecomePurple from "./Stills/ColorTownPrototype_BecomePurpleSTILL.png";
+import ColorTownPrototype_DynamicColorSystem from "./Stills/ColorTownPrototype_DynamicColorSystemSTILL.png";
+import ColorTownPrototype_Logic from "./Stills/ColorTownPrototype_LogicSTILL.png";
+import ColorTownPrototype_Thief from "./Stills/ColorTownPrototype_ThiefSTILL.png";
+import ColorTownPrototype_Typing from "./Stills/ColorTownPrototype_TypingSTILL.png";
+
 
 // import autoAnimate from "@formkit/auto-animate/react";
 
@@ -108,6 +119,11 @@ function App() {
       RailGrinding,
       RailGrindingFAST,
       WhiteboardDrawing,
+      ColorTownPrototype_BecomePurple,
+      ColorTownPrototype_DynamicColorSystem,
+      ColorTownPrototype_Logic,
+      ColorTownPrototype_Thief,
+      ColorTownPrototype_Typing
     });
   }, []);
 
@@ -140,6 +156,11 @@ function App() {
       RailGrindingGIF,
       RailGrindingFASTGIF,
       WhiteboardDrawingGIF,
+      ColorTownPrototype_BecomePurpleGIF,
+      ColorTownPrototype_DynamicColorSystemGIF,
+      ColorTownPrototype_LogicGIF,
+      ColorTownPrototype_ThiefGIF,
+      ColorTownPrototype_TypingGIF
     });
   }, []);
 
@@ -184,7 +205,6 @@ function App() {
         return formattedText;
       }
     }
-
     const formattedDescription = formatDescription(description);
 
     // separate the formatted text into paragraphs
