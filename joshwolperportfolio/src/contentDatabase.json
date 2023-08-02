@@ -120,30 +120,30 @@
     }
   },
   "row2": {
-    "NewGif1": {
-      "alt": "",
-      "title": "",
-      "description": ""
+    "ColorTownPrototype_DynamicColorSystem": {
+      "alt": "a sphere floats high above a sea of other spheres, each in rainbow colors. the closest sphere, the player, changes color from blue, to green, to yellow, to red, and finally to purple all while a mysterious number goes up on-screen.",
+      "title": "Dynamic Color System",
+      "description": "Transactions in Color Town transfer Color between Citizens. As you accrue Color, your color reflects this as you move up through the echelons of Color Town society."
     },
-    "NewGif2": {
-      "alt": "",
-      "title": "",
-      "description": ""
+    "ColorTownPrototype_Typing": {
+      "alt": "words are quickly typed to complete tedious jobs",
+      "title": "Real Skills, Real Jobs",
+      "description": "Diligently use your real-world skills to complete jobs and get more Color! Be careful not to make mistakes."
     },
-    "NewGif3": {
-      "alt": "",
-      "title": "",
-      "description": ""
+    "ColorTownPrototype_Logic": {
+      "alt": "an array of buttons is turned on or off to reflect the answer to a Boolean logic problem",
+      "title": "Failure Is Not An Option",
+      "description": "For slow typers, try out Logic! Quickly activate arrays of buttons to match Boolean logic patterns. Mistakes will not be tolerated, unless you already have the Color to land on your feet."
     },
-    "NewGif4": {
-      "alt": "",
-      "title": "",
-      "description": ""
+    "ColorTownPrototype_Thief": {
+      "alt": "the player dashes between groups of Citizens while radially stealing from all those in range.",
+      "title": "Fast-Tracking It",
+      "description": "Bored of using your skills? Try fast-tracking your way to the top by stepping on the backs of those around you! Dash through space and collect Color from those around you. Be careful not to kill any of your fellow Citizens..."
     },
-    "NewGif5": {
-      "alt": "",
-      "title": "",
-      "description": ""
+    "ColorTownPrototype_BecomePurple": {
+      "alt": "the player continues to steal from those around it until the barrier above them dissolves, allowing them through to the next echelon of Color Town",
+      "title": "Become Purple",
+      "description": "Collect enough Color to move up in Color Town! Once you are the right Color, the barrier will dissolve, letting you into the next echelon of Color Town. Discover more tactics (honest or dirty) as you climb Color Town society in your quest to Become Purple."
     },
     "RailAuthoringTool": {
       "alt": "rail authoring tool in unreal engine",
