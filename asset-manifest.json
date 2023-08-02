@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e2a539a4.css",
-    "main.js": "/static/js/main.c6bfb3bc.js",
+    "main.js": "/static/js/main.0e7d0eb6.js",
     "static/js/787.06fbcaa1.chunk.js": "/static/js/787.06fbcaa1.chunk.js",
     "static/media/RiteGameplay2.gif": "/static/media/RiteGameplay2.9b60aa7f49aac9188fd1.gif",
     "static/media/RiteGameplay4.gif": "/static/media/RiteGameplay4.a27877db37d79415a08f.gif",
@@ -88,11 +88,11 @@
     "static/media/mattLogo.png": "/static/media/mattLogo.c08951f621454d9c159f.png",
     "index.html": "/index.html",
     "main.e2a539a4.css.map": "/static/css/main.e2a539a4.css.map",
-    "main.c6bfb3bc.js.map": "/static/js/main.c6bfb3bc.js.map",
+    "main.0e7d0eb6.js.map": "/static/js/main.0e7d0eb6.js.map",
     "787.06fbcaa1.chunk.js.map": "/static/js/787.06fbcaa1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e2a539a4.css",
-    "static/js/main.c6bfb3bc.js"
+    "static/js/main.0e7d0eb6.js"
   ]
 }
